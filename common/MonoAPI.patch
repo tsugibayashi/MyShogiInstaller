@@ -1,15 +1,25 @@
 diff -Nru MyShogi.org/MyShogi/Model/Dependency/Mono/MonoAPI.cs MyShogi/MyShogi/Model/Dependency/Mono/MonoAPI.cs
---- MyShogi.org/MyShogi/Model/Dependency/Mono/MonoAPI.cs	2020-10-11 14:30:41.076554111 +0900
-+++ MyShogi/MyShogi/Model/Dependency/Mono/MonoAPI.cs	2020-10-11 14:29:51.560885642 +0900
-@@ -428,6 +428,11 @@
-         public static readonly string ConsiderationWindow = DefaultFont2;
+--- MyShogi.org/MyShogi/Model/Dependency/Mono/MonoAPI.cs	2020-10-11 21:15:21.127446538 +0900
++++ MyShogi/MyShogi/Model/Dependency/Mono/MonoAPI.cs	2020-10-11 21:16:51.518989564 +0900
+@@ -222,19 +222,10 @@
+             }
+         }
  
-         /// <summary>
-+        /// ミニ盤面の上のタブの文字列
-+        /// </summary>
-+        public static readonly string MiniBoardTab = DefaultFont1;
-+
-+        /// <summary>
-         /// ToolTip
-         /// </summary>
-         public static readonly string ToolTip = DefaultFont1;
+-        // htmlファイルをブラウザで開く
+-        // (htmlが拡張子関連付けされているアプリで開く)
+-        // ※　この実装でLinux環境で動くのかは未確認。[2020/05/10]
+-        // 外部エンジン読み込み用の説明ファイル(html)を開くのに用いている。
++        // 外部エンジン読み込み用の説明ファイル(html)をブラウザで開く。
+         public static void OpenWithBrowser(string htmlPath)
+         {
+-            var current = Path.GetDirectoryName(Application.ExecutablePath);
+-            var filePath = Path.Combine(current, htmlPath);
+-
+-            var p = new Process();
+-            p.StartInfo.FileName = "file:///" + filePath;
+-            p.StartInfo.UseShellExecute = true;
+-            p.Start();
++            Process.Start("sensible-browser", htmlPath);
+         }
+     }
+ 
