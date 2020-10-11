@@ -80,17 +80,17 @@ GPL v3
 
 ## ありそうな質問
 
-### どんな環境ができますか？
+### どのようなソフトウェアがインストールされますか？
 
 以下のものがインストールされます。
 
 * MyShogi ( https://github.com/yaneurao/MyShogi )
-* やねうら王 KPP_KKPT版 ( https://github.com/yaneurao/YaneuraOu )
+* やねうら王 NNUE版 ( https://github.com/yaneurao/YaneuraOu )
 * MyShogiSoundPlayer ( https://github.com/jnory/MyShogiSoundPlayer )
 * フリーの画像データ ( https://github.com/jnory/MyShogiImages )
 * フリーの音声データ ( https://github.com/matarillo/MyShogiSound )
 
-### 商用ライセンスを持っているのですが、画像などはそちらを使えますか？
+### 商用ライセンスを持っているのですが、それらの画像を使用できますか？
 
 Windows版からそれらしきものをご自分でコピーして差し替えて下さい。
 (差し替えの手間を考えるとこのインストーラーを使うメリットがどれほどあるかは微妙)
