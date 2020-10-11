@@ -49,18 +49,18 @@ g++-9は[レポジトリ](ppa:ubuntu-toolchain-r/test)を使用してインス�
 
   WORKDIR: 作業用ディレクトリ (デフォルト値は $HOME/MyShogi/work)
 
-  YANEURAOU_ARCHLIST: ビルドするCPUの種類 (デフォルト値は avx2)
+  YANEURAOU_ARCHLIST: ビルドするCPU拡張機能の種類 (デフォルト値は avx2)
 
 (3)以下の7つのコマンドを実行し、MyShogiの実行ファイル $DESTDIR/myshogi.sh を生成します。
 
-    $ ./ubuntu/install.sh 0
-    $ ./ubuntu/install.sh 1
-    $ ./ubuntu/install.sh 2
-    $ ./ubuntu/install.sh 3
-    $ ./ubuntu/install.sh 4
-    $ ./ubuntu/install.sh 5
-    $ ./ubuntu/install.sh 6
-    $ ./ubuntu/install.sh 7
+    $ ./ubuntu_18.04/install.sh 0
+    $ ./ubuntu_18.04/install.sh 1
+    $ ./ubuntu_18.04/install.sh 2
+    $ ./ubuntu_18.04/install.sh 3
+    $ ./ubuntu_18.04/install.sh 4
+    $ ./ubuntu_18.04/install.sh 5
+    $ ./ubuntu_18.04/install.sh 6
+    $ ./ubuntu_18.04/install.sh 7
 
 ## 使い方
 
