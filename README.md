@@ -3,6 +3,7 @@
 ## これは何？
 
 MyShogi (https://github.com/yaneurao/MyShogi) の私家版インストーラーです。
+
 GitHub - jnory/MyShogiInstaller (https://github.com/jnory/MyShogiInstaller) を修正して作成しました。
 
 ## 対応環境
@@ -33,14 +34,14 @@ monodevelopは[公式サイト](https://www.mono-project.com/download)
 
 g++-9は[レポジトリ](ppa:ubuntu-toolchain-r/test)を使用してインストールします。
 
-  $ sudo add-apt-repository ppa:ubuntu-toolchain-r/test
-  $ sudo apt install build-essential g++-9 libomp-8-dev libopenblas-dev
+    $ sudo add-apt-repository ppa:ubuntu-toolchain-r/test
+    $ sudo apt install build-essential g++-9 libomp-8-dev libopenblas-dev
 
 ## ビルド手順
 
 (1)使用するPC上のCPUがサポートする拡張機能を確認します。
 
-  $ grep flags /proc/cpuinfo | head -1 | grep -E '(avx2|sse4_2|sse4_1|sse2)'
+    $ grep flags /proc/cpuinfo | head -1 | grep -E '(avx2|sse4_2|sse4_1|sse2)'
 
 (2)./common/configure.sh を開き、下記変数を修正します。
 
@@ -50,19 +51,19 @@ g++-9は[レポジトリ](ppa:ubuntu-toolchain-r/test)を使用してインス�
 
 (3)以下の7つのコマンドを実行し、MyShogiの実行ファイル $DESTDIR/myshogi.sh を生成します。
 
-  > ./ubuntu/install.sh 0
-  > ./ubuntu/install.sh 1
-  > ./ubuntu/install.sh 2
-  > ./ubuntu/install.sh 3
-  > ./ubuntu/install.sh 4
-  > ./ubuntu/install.sh 5
-  > ./ubuntu/install.sh 6
-  > ./ubuntu/install.sh 7
+    $ ./ubuntu/install.sh 0
+    $ ./ubuntu/install.sh 1
+    $ ./ubuntu/install.sh 2
+    $ ./ubuntu/install.sh 3
+    $ ./ubuntu/install.sh 4
+    $ ./ubuntu/install.sh 5
+    $ ./ubuntu/install.sh 6
+    $ ./ubuntu/install.sh 7
 
 ## 使い方
 
-  $ cd <インストール先ディレクトリ>
-  $ ./myshogi.sh
+    $ cd <インストール先ディレクトリ>
+    $ ./myshogi.sh
 
 ## engine_define.xmlについて
 
@@ -91,10 +92,6 @@ GPL v3
 
 Windows版からそれらしきものをご自分でコピーして差し替えて下さい。
 (差し替えの手間を考えるとこのインストーラーを使うメリットがどれほどあるかは微妙)
-
-### アイコンないの？
-
-Pull Requestお待ちしております。
 
 ### 不具合に気付きました
 
