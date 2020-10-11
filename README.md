@@ -1,8 +1,8 @@
 # MyShogiInstaller
 
-## これは何？
+## 概要
 
-MyShogi (https://github.com/yaneurao/MyShogi) の私家版インストーラーです。
+MyShogi (https://github.com/yaneurao/MyShogi) の独自インストーラーです。
 
 GitHub - jnory/MyShogiInstaller (https://github.com/jnory/MyShogiInstaller) を修正して作成しました。
 
@@ -51,7 +51,7 @@ g++-9は[レポジトリ](ppa:ubuntu-toolchain-r/test)を使用してインス�
 
   YANEURAOU_ARCHLIST: ビルドするCPU拡張機能の種類 (デフォルト値は avx2)
 
-(3)以下の8つのコマンドを実行し、MyShogiの実行ファイル $DESTDIR/myshogi.sh を生成します。
+(3)以下の8つのコマンドを実行し、MyShogi、および、その関連ファイルをインストールします。
 
     $ ./ubuntu_18.04/install.sh 0
     $ ./ubuntu_18.04/install.sh 1
@@ -80,7 +80,7 @@ GPL v3
 
 ### どのようなソフトウェアがインストールされますか？
 
-以下のものがインストールされます。
+以下ソフトウェアおよびデータがインストールされます。
 
 * MyShogi (https://github.com/yaneurao/MyShogi)
 * やねうら王 NNUE版 (https://github.com/yaneurao/YaneuraOu)
@@ -90,8 +90,8 @@ GPL v3
 
 ### 商用ライセンスを持っているのですが、それらの画像を使用できますか？
 
-Windows版からそれらしきものをご自分でコピーして差し替えて下さい。
-(差し替えの手間を考えるとこのインストーラーを使うメリットがどれほどあるかは微妙)
+MyShogiの画像データを"将棋神 やねうら王"の画像データに置き換えることができるはずです。
+ただし、ライセンス的に問題ないかは判断できかねます。
 
 ### 不具合に気付きました
 

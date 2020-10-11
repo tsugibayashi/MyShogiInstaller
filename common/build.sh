@@ -20,6 +20,7 @@ function build_myshogi() {
 
     msbuild ./MyShogi.sln /p:Configuration=${OS} 2>&1 >> ../MyShogi.build.log
     cp -p ./MyShogi/bin/${OS}/MyShogi.exe ${TARGET_DIR}
+    cp -p ./MyShogi/html/howto-use-external-engine.html ${TARGET_DIR}/html/
     popd >& /dev/null
     popd >& /dev/null
 

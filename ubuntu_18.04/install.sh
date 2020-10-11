@@ -131,7 +131,7 @@ ACTION=$1
 if [ ! -d $DESTDIR ]; then
     mkdir -pv $DESTDIR
 fi
-for dirname in engine eval book; do
+for dirname in engine eval book html; do
     if [ ! -d $DESTDIR/$dirname ]; then
         mkdir -pv $DESTDIR/$dirname
     fi
