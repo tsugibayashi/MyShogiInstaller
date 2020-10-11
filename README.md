@@ -69,10 +69,8 @@ g++-9は[レポジトリ](ppa:ubuntu-toolchain-r/test)を使用してインス�
 
 ## engine_define.xmlについて
 
-同梱してあるengine_define.xmlは、MyShogiのバイナリから生成させたサンプルXMLを元に改変しています。
-生成コードは[ここ](https://github.com/yaneurao/MyShogi/blob/master/MyShogi/Model/Shogi/EngineDefine/Sample/EngineDefineSample.cs)にあります。
-棋力設定の名前に段位がありますが、本家様と区別するため先頭に `F` をつけてあります(FreeのF)。
-このファイルに記載の段位については実際の棋力と関係ありません。
+同梱しているengine_define.xmlは、
+[GitHub - jnory/MyShogiInstaller](https://github.com/jnory/MyShogiInstaller) と同じものです。
 
 ## ライセンス
 
@@ -84,11 +82,11 @@ GPL v3
 
 以下のものがインストールされます。
 
-* MyShogi ( https://github.com/yaneurao/MyShogi )
-* やねうら王 NNUE版 ( https://github.com/yaneurao/YaneuraOu )
-* MyShogiSoundPlayer ( https://github.com/jnory/MyShogiSoundPlayer )
-* フリーの画像データ ( https://github.com/jnory/MyShogiImages )
-* フリーの音声データ ( https://github.com/matarillo/MyShogiSound )
+* MyShogi (https://github.com/yaneurao/MyShogi)
+* やねうら王 NNUE版 (https://github.com/yaneurao/YaneuraOu)
+* MyShogiSoundPlayer (https://github.com/jnory/MyShogiSoundPlayer)
+* フリーの画像データ (https://github.com/jnory/MyShogiImages)
+* フリーの音声データ (https://github.com/matarillo/MyShogiSound)
 
 ### 商用ライセンスを持っているのですが、それらの画像を使用できますか？
 
