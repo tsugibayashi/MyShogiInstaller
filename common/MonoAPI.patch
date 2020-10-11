@@ -1,0 +1,15 @@
+diff -Nru MyShogi.org/MyShogi/Model/Dependency/Mono/MonoAPI.cs MyShogi/MyShogi/Model/Dependency/Mono/MonoAPI.cs
+--- MyShogi.org/MyShogi/Model/Dependency/Mono/MonoAPI.cs	2020-10-11 14:30:41.076554111 +0900
++++ MyShogi/MyShogi/Model/Dependency/Mono/MonoAPI.cs	2020-10-11 14:29:51.560885642 +0900
+@@ -428,6 +428,11 @@
+         public static readonly string ConsiderationWindow = DefaultFont2;
+ 
+         /// <summary>
++        /// ミニ盤面の上のタブの文字列
++        /// </summary>
++        public static readonly string MiniBoardTab = DefaultFont1;
++
++        /// <summary>
+         /// ToolTip
+         /// </summary>
+         public static readonly string ToolTip = DefaultFont1;

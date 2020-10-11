@@ -6,14 +6,19 @@ function build_myshogi() {
     local VERSION=$3
     local OS=$4
     local TARGET_DIR=$5
+    local PATCH=$6
 
     echo -n "MyShogiをビルドしています ... " 1>&2
 
     pushd ${BUILD_DIR} >& /dev/null
     git clone ${REPOS} MyShogi >& MyShogi.build.log
     pushd MyShogi >& /dev/null
-
     (git checkout ${VERSION} 2>&1) >> ../MyShogi.build.log
+
+    # MonoAPI.csの修正
+    # https://github.com/yaneurao/MyShogi/commit/28bd2e36e1cd0d30ba81f9354a40b28977fe2927
+    patch -p1 < ${PATCH}
+
     msbuild ./MyShogi.sln /p:Configuration=${OS} 2>&1 >> ../MyShogi.build.log
     cp -p ./MyShogi/bin/${OS}/MyShogi.exe ${TARGET_DIR}
     popd >& /dev/null

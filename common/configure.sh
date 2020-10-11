@@ -8,7 +8,8 @@ WORKDIR=$HOME/MyShogi/work
 
 ####### ダウンロード元の設定 #######
 MYSHOGI_REPOS=https://github.com/yaneurao/MyShogi.git
-MYSHOGI_VERSION=77ca6b71b65e1203dde9f17d124c40340c1f981f     #Jan 27, 2020
+MYSHOGI_VERSION=03f4c8c56546ac4685048bcdcf68f83440b1f3cb     #Feb  9, 2020
+#MYSHOGI_VERSION=77ca6b71b65e1203dde9f17d124c40340c1f981f    #Jan 27, 2020
 #MYSHOGI_VERSION=3a9e7b17b8a6daa809bfce391c68bec88c4302c4    #Nov 28, 2018
 
 YANEURAOU_REPOS=https://github.com/yaneurao/YaneuraOu.git

@@ -51,7 +51,7 @@ g++-9は[レポジトリ](ppa:ubuntu-toolchain-r/test)を使用してインス�
 
   YANEURAOU_ARCHLIST: ビルドするCPU拡張機能の種類 (デフォルト値は avx2)
 
-(3)以下の7つのコマンドを実行し、MyShogiの実行ファイル $DESTDIR/myshogi.sh を生成します。
+(3)以下の8つのコマンドを実行し、MyShogiの実行ファイル $DESTDIR/myshogi.sh を生成します。
 
     $ ./ubuntu_18.04/install.sh 0
     $ ./ubuntu_18.04/install.sh 1

@@ -153,12 +153,11 @@ case $ACTION in
     ;;
     # MyShogiのビルド
     1)
-        build_myshogi ${WORKDIR} ${MYSHOGI_REPOS} ${MYSHOGI_VERSION} Linux ${DESTDIR}
+        build_myshogi ${WORKDIR} ${MYSHOGI_REPOS} ${MYSHOGI_VERSION} Linux ${DESTDIR} ${BASEDIR}/common/MonoAPI.patch
     ;;
     # やねうら王のビルド
     2)
         build_yaneuraou ${WORKDIR} ${YANEURAOU_REPOS} ${YANEURAOU_VERSION} ${YANEURAOU_ARCHLIST} ${DESTDIR} ${BASEDIR}/engine_defines
-        #build_yaneuraou ${WORKDIR} ${YANEURAOU_REPOS} ${YANEURAOU_VERSION} ${YANEURAOU_ARCHLIST} ${DESTDIR} ${BASEDIR}/engine_defines ${BASEDIR}/common/YaneuraOu.patch
     ;;
     # SoundPlayerのビルド
     3)
