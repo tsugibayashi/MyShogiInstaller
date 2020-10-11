@@ -46,7 +46,9 @@ g++-9は[レポジトリ](ppa:ubuntu-toolchain-r/test)を使用してインス�
 (2)./common/configure.sh を開き、下記変数を修正します。
 
   DESTDIR: インストール先ディレクトリ (デフォルト値は $HOME/MyShogi)
+
   WORKDIR: 作業用ディレクトリ (デフォルト値は $HOME/MyShogi/work)
+
   YANEURAOU_ARCHLIST: ビルドするCPUの種類 (デフォルト値は avx2)
 
 (3)以下の7つのコマンドを実行し、MyShogiの実行ファイル $DESTDIR/myshogi.sh を生成します。
