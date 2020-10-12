@@ -1,6 +1,6 @@
 diff -Nru MyShogi.org/MyShogi/Model/Dependency/Mono/MonoAPI.cs MyShogi/MyShogi/Model/Dependency/Mono/MonoAPI.cs
---- MyShogi.org/MyShogi/Model/Dependency/Mono/MonoAPI.cs	2020-10-12 12:18:03.102400683 +0900
-+++ MyShogi/MyShogi/Model/Dependency/Mono/MonoAPI.cs	2020-10-12 12:18:47.570167139 +0900
+--- MyShogi.org/MyShogi/Model/Dependency/Mono/MonoAPI.cs	2020-10-12 15:32:18.128392269 +0900
++++ MyShogi/MyShogi/Model/Dependency/Mono/MonoAPI.cs	2020-10-12 15:31:30.088860352 +0900
 @@ -222,19 +222,14 @@
              }
          }
@@ -28,23 +28,23 @@ diff -Nru MyShogi.org/MyShogi/Model/Dependency/Mono/MonoAPI.cs MyShogi/MyShogi/M
      }
  
 diff -Nru MyShogi.org/MyShogi/View/Win2D/Setting/EngineDefineEditDialog.Designer.cs MyShogi/MyShogi/View/Win2D/Setting/EngineDefineEditDialog.Designer.cs
---- MyShogi.org/MyShogi/View/Win2D/Setting/EngineDefineEditDialog.Designer.cs	2020-10-12 12:18:03.122400579 +0900
-+++ MyShogi/MyShogi/View/Win2D/Setting/EngineDefineEditDialog.Designer.cs	2020-10-12 12:19:53.349820379 +0900
+--- MyShogi.org/MyShogi/View/Win2D/Setting/EngineDefineEditDialog.Designer.cs	2020-10-12 15:32:18.148392076 +0900
++++ MyShogi/MyShogi/View/Win2D/Setting/EngineDefineEditDialog.Designer.cs	2020-10-12 15:34:24.587190650 +0900
 @@ -387,8 +387,9 @@
              this.label15.Name = "label15";
              this.label15.Size = new System.Drawing.Size(431, 24);
              this.label15.TabIndex = 1;
 -            this.label15.Text = "Step 4. 書き出されたエンジン定義ファイルを思考エンジンのフォルダに移動させて、\r\n　思考エンジンを\"Documents/myshogi-engines/エ" +
 -    "ンジン名/\"配下に移動させてください。";
-+            this.label15.Text = "Step 4. 書き出されたエンジン定義ファイル\"engine_define.xml\"を\r\n　
-+思考エンジンのフォルダ\"<MyShogiのインストール先>/engine/" +
++            this.label15.Text = "Step 4. 書き出されたエンジン定義ファイル\"engine_define.xml\"を\r\n　" + 
++    "思考エンジンのフォルダ\"<MyShogiのインストール先>/engine/" + 
 +    "<思考エンジン名>/\"配下に移動させてください。";
              // 
              // label16
              // 
 diff -Nru MyShogi.org/MyShogi/html/howto-use-external-engine.html MyShogi/MyShogi/html/howto-use-external-engine.html
---- MyShogi.org/MyShogi/html/howto-use-external-engine.html	2020-10-12 12:18:03.126400557 +0900
-+++ MyShogi/MyShogi/html/howto-use-external-engine.html	2020-10-12 12:19:09.774050257 +0900
+--- MyShogi.org/MyShogi/html/howto-use-external-engine.html	2020-10-12 15:32:18.152392036 +0900
++++ MyShogi/MyShogi/html/howto-use-external-engine.html	2020-10-12 15:31:46.628698392 +0900
 @@ -875,11 +875,11 @@
  <td>64bit版 AVX2以上用</td>
  </tr>
@@ -60,8 +60,8 @@ diff -Nru MyShogi.org/MyShogi/html/howto-use-external-engine.html MyShogi/MyShog
  </tr>
  </tbody>
 diff -Nru MyShogi.org/MyShogi/html/howto-use-external-engine.md MyShogi/MyShogi/html/howto-use-external-engine.md
---- MyShogi.org/MyShogi/html/howto-use-external-engine.md	2020-10-12 12:18:03.126400557 +0900
-+++ MyShogi/MyShogi/html/howto-use-external-engine.md	2020-10-12 12:19:16.462015016 +0900
+--- MyShogi.org/MyShogi/html/howto-use-external-engine.md	2020-10-12 15:32:18.152392036 +0900
++++ MyShogi/MyShogi/html/howto-use-external-engine.md	2020-10-12 15:31:57.192595395 +0900
 @@ -344,8 +344,8 @@
  | engine/apery/apery_sse41.exe | 64bit版 SSE4.1以上用 |
  | engine/apery/apery_sse42.exe | 64bit版 SSE4.2以上用 |

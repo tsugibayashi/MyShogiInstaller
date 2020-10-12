@@ -39,28 +39,32 @@ g++-9は[レポジトリ](ppa:ubuntu-toolchain-r/test)を使用してインス�
 
 ## ビルド手順
 
-(1) 使用するPC上のCPUがサポートする拡張機能を確認します。
+(1) 下記から最新のファイル(zipまたはtar.gz)を取得します。
 
-    $ grep flags /proc/cpuinfo | head -1 | grep -E '(avx2|sse4_2|sse4_1|sse2)'
+    https://github.com/tsugibayashi/MyShogiInstaller/tags
 
-(2) ./common/configure.sh を開き、下記変数を修正します。
+(2) 取得したファイルを展開し、作成されたディレクトリに移動します。
+
+    $ unzip V1.3.zip
+    $ cd MyShogiInstaller-1.3/
+
+(3) ./configure.sh を開き、下記変数を修正します。
 
   DESTDIR: インストール先ディレクトリ (デフォルト値は $HOME/MyShogi)
 
   WORKDIR: 作業用ディレクトリ (デフォルト値は $HOME/MyShogi/work)
 
-  YANEURAOU_ARCHLIST: ビルドするCPU拡張機能の種類 (デフォルト値は avx2)
+(4) 使用するPC上のCPUがサポートする拡張機能を確認します。
 
-(3) 以下の8つのコマンドを実行し、MyShogi、および、その関連ファイルをインストールします。
+    $ grep flags /proc/cpuinfo | head -1 | grep -E '(avx2|sse4_2|sse4_1|sse2)'
 
-    $ ./ubuntu_18.04/install.sh 0
-    $ ./ubuntu_18.04/install.sh 1
-    $ ./ubuntu_18.04/install.sh 2
-    $ ./ubuntu_18.04/install.sh 3
-    $ ./ubuntu_18.04/install.sh 4
-    $ ./ubuntu_18.04/install.sh 5
-    $ ./ubuntu_18.04/install.sh 6
-    $ ./ubuntu_18.04/install.sh 7
+(5) ./packages/engine_tanuki_mate/pkgfile.sh および ./packages/engine_tanuki_wcsc29/pkgfile.sh を開き、下記変数を修正します。
+
+  ARCHLIST: ビルドするCPU拡張機能の種類 (デフォルト値は avx2)
+
+(6) 以下のコマンドを実行し、MyShogi、および、その関連ファイルをインストールします。
+
+    $ ./myshogi_installer.sh all
 
 ## 使い方
 
