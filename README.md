@@ -4,7 +4,7 @@
 
 MyShogi (https://github.com/yaneurao/MyShogi) の独自インストーラーです。
 
-GitHub - jnory/MyShogiInstaller (https://github.com/jnory/MyShogiInstaller) を修正して作成しました。
+GitHub - jnory/MyShogiInstaller (https://github.com/jnory/MyShogiInstaller) を全面的に改変して作成しました。
 
 ## 対応環境
 
@@ -104,7 +104,10 @@ GPL v3
 以下ソフトウェアおよびデータがインストールされます。
 
 * MyShogi (https://github.com/yaneurao/MyShogi)
-* やねうら王 NNUE版 (https://github.com/yaneurao/YaneuraOu)
+* やねうら王 NNUE版 思考エンジン (https://github.com/yaneurao/YaneuraOu)
+* やねうら王 定跡ファイル (https://github.com/yaneurao/YaneuraOu)
+* tanuki- 詰将棋エンジン (https://github.com/yaneurao/YaneuraOu)
+* tanuki- WCSC29版 評価関数 (https://github.com/nodchip/tanuki-)
 * MyShogiSoundPlayer (https://github.com/jnory/MyShogiSoundPlayer)
 * フリーの画像データ (https://github.com/jnory/MyShogiImages)
 * フリーの音声データ (https://github.com/matarillo/MyShogiSound)
@@ -112,6 +115,7 @@ GPL v3
 ### 商用ライセンスを持っているのですが、それらの画像を使用できますか？
 
 MyShogiの画像データを"将棋神 やねうら王"の画像データに置き換えることができるはずです。
+
 ただし、ライセンス的に問題ないかは判断できかねます。
 
 ### 不具合に気付きました
