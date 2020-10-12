@@ -64,6 +64,12 @@ function compile_yaneuraou() {
     if [ -e ${ENGINE_DEFINES}/${PACKAGE_NAME}/engine_options.txt ]; then
         cp -p ${ENGINE_DEFINES}/${PACKAGE_NAME}/engine_options.txt ${TARGET_DIR}/engine/${PACKAGE_NAME}/
     fi
+
+    # 画像ファイルのコピー
+    if [ -f ${ENGINE_DEFINES}/${PACKAGE_NAME}/banner.png ]; then
+        cp -p ${ENGINE_DEFINES}/${PACKAGE_NAME}/banner.png ${TARGET_DIR}/engine/${PACKAGE_NAME}
+    fi
+
     echo -n ") " 1>&2
 }
 
