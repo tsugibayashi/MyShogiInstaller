@@ -39,11 +39,11 @@ g++-9は[レポジトリ](ppa:ubuntu-toolchain-r/test)を使用してインス�
 
 ## ビルド手順
 
-(1)使用するPC上のCPUがサポートする拡張機能を確認します。
+1. 使用するPC上のCPUがサポートする拡張機能を確認します。
 
     $ grep flags /proc/cpuinfo | head -1 | grep -E '(avx2|sse4_2|sse4_1|sse2)'
 
-(2)./common/configure.sh を開き、下記変数を修正します。
+1. ./common/configure.sh を開き、下記変数を修正します。
 
   DESTDIR: インストール先ディレクトリ (デフォルト値は $HOME/MyShogi)
 
@@ -51,7 +51,7 @@ g++-9は[レポジトリ](ppa:ubuntu-toolchain-r/test)を使用してインス�
 
   YANEURAOU_ARCHLIST: ビルドするCPU拡張機能の種類 (デフォルト値は avx2)
 
-(3)以下の8つのコマンドを実行し、MyShogi、および、その関連ファイルをインストールします。
+1. 以下の8つのコマンドを実行し、MyShogi、および、その関連ファイルをインストールします。
 
     $ ./ubuntu_18.04/install.sh 0
     $ ./ubuntu_18.04/install.sh 1
@@ -69,8 +69,23 @@ g++-9は[レポジトリ](ppa:ubuntu-toolchain-r/test)を使用してインス�
 
 ## engine_define.xmlについて
 
-同梱しているengine_define.xmlは、
-[GitHub - jnory/MyShogiInstaller](https://github.com/jnory/MyShogiInstaller) と同じものです。
+同梱しているengine_define.xmlは、MyShogiの 設定->外部思考エンジンの利用 を使って生成したものです。
+対象CPUには AVX2 のみ指定しています。
+
+その他のCPU (SSE2, SSE4.1, SSE4.2 など) を使用したい場合は、下記手順に従って 独自のengine_define.xml を作成してください。
+
+1. MyShogiを起動します。
+
+    $ cd <インストール先ディレクトリ>
+    $ ./myshogi.sh
+
+1.  設定->外部思考エンジンの利用 を選択します。
+
+1. 外部思考エンジンの設定を行います。(対象CPU に使用したいCPUを指定します)
+
+1. [エンジン定義ファイルの書き出し]をクリックし、engine_define.xml を生成します。
+
+1. 生成した engine_define.xml を <インストール先ディレクトリ>/engine/<外部思考エンジン名>/ にコピーします。
 
 ## ライセンス
 
