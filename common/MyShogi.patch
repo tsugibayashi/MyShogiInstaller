@@ -1,0 +1,75 @@
+diff -Nru MyShogi.org/MyShogi/Model/Dependency/Mono/MonoAPI.cs MyShogi/MyShogi/Model/Dependency/Mono/MonoAPI.cs
+--- MyShogi.org/MyShogi/Model/Dependency/Mono/MonoAPI.cs	2020-10-12 12:18:03.102400683 +0900
++++ MyShogi/MyShogi/Model/Dependency/Mono/MonoAPI.cs	2020-10-12 12:18:47.570167139 +0900
+@@ -222,19 +222,14 @@
+             }
+         }
+ 
+-        // htmlファイルをブラウザで開く
+-        // (htmlが拡張子関連付けされているアプリで開く)
+-        // ※　この実装でLinux環境で動くのかは未確認。[2020/05/10]
+-        // 外部エンジン読み込み用の説明ファイル(html)を開くのに用いている。
++        // 外部エンジン読み込み用の説明ファイル(html)をブラウザで開く。
+         public static void OpenWithBrowser(string htmlPath)
+         {
+-            var current = Path.GetDirectoryName(Application.ExecutablePath);
+-            var filePath = Path.Combine(current, htmlPath);
+-
+-            var p = new Process();
+-            p.StartInfo.FileName = "file:///" + filePath;
+-            p.StartInfo.UseShellExecute = true;
+-            p.Start();
++#if MACOS
++                Process.Start("open", htmlPath);
++#elif LINUX
++                Process.Start("sensible-browser", htmlPath);
++#endif
+         }
+     }
+ 
+diff -Nru MyShogi.org/MyShogi/View/Win2D/Setting/EngineDefineEditDialog.Designer.cs MyShogi/MyShogi/View/Win2D/Setting/EngineDefineEditDialog.Designer.cs
+--- MyShogi.org/MyShogi/View/Win2D/Setting/EngineDefineEditDialog.Designer.cs	2020-10-12 12:18:03.122400579 +0900
++++ MyShogi/MyShogi/View/Win2D/Setting/EngineDefineEditDialog.Designer.cs	2020-10-12 12:19:53.349820379 +0900
+@@ -387,8 +387,9 @@
+             this.label15.Name = "label15";
+             this.label15.Size = new System.Drawing.Size(431, 24);
+             this.label15.TabIndex = 1;
+-            this.label15.Text = "Step 4. 書き出されたエンジン定義ファイルを思考エンジンのフォルダに移動させて、\r\n　思考エンジンを\"Documents/myshogi-engines/エ" +
+-    "ンジン名/\"配下に移動させてください。";
++            this.label15.Text = "Step 4. 書き出されたエンジン定義ファイル\"engine_define.xml\"を\r\n　
++思考エンジンのフォルダ\"<MyShogiのインストール先>/engine/" +
++    "<思考エンジン名>/\"配下に移動させてください。";
+             // 
+             // label16
+             // 
+diff -Nru MyShogi.org/MyShogi/html/howto-use-external-engine.html MyShogi/MyShogi/html/howto-use-external-engine.html
+--- MyShogi.org/MyShogi/html/howto-use-external-engine.html	2020-10-12 12:18:03.126400557 +0900
++++ MyShogi/MyShogi/html/howto-use-external-engine.html	2020-10-12 12:19:09.774050257 +0900
+@@ -875,11 +875,11 @@
+ <td>64bit版 AVX2以上用</td>
+ </tr>
+ <tr>
+-<td>engine/Apery/engine_define.xml</td>
++<td>engine/apery/engine_define.xml</td>
+ <td>エンジン定義ファイル</td>
+ </tr>
+ <tr>
+-<td>engine/Apery/banner.png</td>
++<td>engine/apery/banner.png</td>
+ <td>バナー画像(任意)</td>
+ </tr>
+ </tbody>
+diff -Nru MyShogi.org/MyShogi/html/howto-use-external-engine.md MyShogi/MyShogi/html/howto-use-external-engine.md
+--- MyShogi.org/MyShogi/html/howto-use-external-engine.md	2020-10-12 12:18:03.126400557 +0900
++++ MyShogi/MyShogi/html/howto-use-external-engine.md	2020-10-12 12:19:16.462015016 +0900
+@@ -344,8 +344,8 @@
+ | engine/apery/apery_sse41.exe | 64bit版 SSE4.1以上用 |
+ | engine/apery/apery_sse42.exe | 64bit版 SSE4.2以上用 |
+ | engine/apery/apery_avx2.exe | 64bit版 AVX2以上用 |
+-| engine/Apery/engine_define.xml | エンジン定義ファイル |
+-| engine/Apery/banner.png | バナー画像(任意) |
++| engine/apery/engine_define.xml | エンジン定義ファイル |
++| engine/apery/banner.png | バナー画像(任意) |
+ 
+ そのあと、Step 3.で書き出されたエンジン定義ファイルを思考エンジン本体があるフォルダに移動させます。
+ 

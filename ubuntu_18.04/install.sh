@@ -153,7 +153,7 @@ case $ACTION in
     ;;
     # MyShogiのビルド
     1)
-        build_myshogi ${WORKDIR} ${MYSHOGI_REPOS} ${MYSHOGI_VERSION} Linux ${DESTDIR} ${BASEDIR}/common/MonoAPI.patch
+        build_myshogi ${WORKDIR} ${MYSHOGI_REPOS} ${MYSHOGI_VERSION} Linux ${DESTDIR} ${BASEDIR}/common/${MYSHOGI_PATCH}
     ;;
     # やねうら王のビルド
     2)
