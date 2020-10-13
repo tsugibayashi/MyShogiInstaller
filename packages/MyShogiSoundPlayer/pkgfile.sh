@@ -11,16 +11,14 @@ OS=Linux
 MAKE_TARGET=linux
 EXT=so
 
-# 変数(DESTDIR, WORKDIR) の読み込み
+# 変数(DESTDIR, WORKDIR, LOGDIR) の読み込み
 BASEDIR=$(cd `dirname $0`/../..; pwd)
 . ${BASEDIR}/configure.sh
 # 関数の読み込み
 . ${BASEDIR}/tool.sh
 
-# インストール先ディレクトリの作成
-create_destdir
-# 作業用ディレクトリの作成
-create_workdir
+# インストール先ディレクトリなどを作成
+create_dirs $DESTDIR $WORKDIR $LOGDIR
 
 echo -n "SoundPlayerをインストールしています ... "
 
@@ -29,14 +27,14 @@ cd ${WORKDIR} >& /dev/null
 
 # $NAME ディレクトリが存在しないとき、ビルドを実行する
 if [ ! -d $NAME ]; then
-    git clone --recursive $URL $NAME >& ${NAME}.install.log
+    git clone --recursive $URL $NAME >& ${LOGDIR}/${NAME}.install.log
 
     cd $NAME >& /dev/null
-    (git checkout ${COMMIT_HASH} 2>&1) >> ../${NAME}.install.log
+    (git checkout ${COMMIT_HASH} 2>&1) >> ${LOGDIR}/${NAME}.install.log
 
-    (make ${MAKE_TARGET} 2>&1) >> ../${DIRNAME}.build.log
-    cp -pv SoundPlayer/bin/${OS}/SoundPlayer.exe ${DESTDIR} 2>&1 >> ../${NAME}.install.log
-    cp -pv SoundPlayer/bin/${OS}/libwplay.${EXT} ${DESTDIR} 2>&1 >> ../${NAME}.install.log
+    (make ${MAKE_TARGET} 2>&1) >> ${LOGDIR}/${DIRNAME}.build.log
+    cp -pv SoundPlayer/bin/${OS}/SoundPlayer.exe ${DESTDIR} 2>&1 >> ${LOGDIR}/${NAME}.install.log
+    cp -pv SoundPlayer/bin/${OS}/libwplay.${EXT} ${DESTDIR} 2>&1 >> ${LOGDIR}/${NAME}.install.log
 fi
 
 echo "完了"

@@ -45,20 +45,22 @@ g++-9は[レポジトリ](ppa:ubuntu-toolchain-r/test)を使用してインス�
 
 (2) 取得したファイルを展開し、作成されたディレクトリに移動します。
 
-    $ unzip V1.3.zip
-    $ cd MyShogiInstaller-1.3/
+    $ unzip V1.4.zip
+    $ cd MyShogiInstaller-1.4/
 
 (3) ./configure.sh を開き、下記変数を修正します。
 
-  DESTDIR: インストール先ディレクトリ (デフォルト値は $HOME/MyShogi)
-
-  WORKDIR: 作業用ディレクトリ (デフォルト値は $HOME/MyShogi/work)
+| 変数 | 説明 | デフォルト値 |
+----|----|----
+| DESTDIR | インストール先ディレクトリ | $HOME/MyShogi |
+| WORKDIR | 作業用ディレクトリ | $HOME/MyShogi/work |
+| LOGDIR | インストールログの出力先 | $HOME/MyShogi/log |
 
 (4) 使用するPC上のCPUがサポートする拡張機能を確認します。
 
     $ grep flags /proc/cpuinfo | head -1 | grep -E '(avx2|sse4_2|sse4_1|sse2)'
 
-(5) ./packages/engine_tanuki_mate/pkgfile.sh および ./packages/engine_tanuki_wcsc29/pkgfile.sh を開き、下記変数を修正します。
+(5) ./packages/engine-tanuki-mate/pkgfile.sh および ./packages/engine-tanuki-wcso1/pkgfile.sh を開き、下記変数を修正します。
 
   ARCHLIST: ビルドするCPU拡張機能の種類 (デフォルト値は avx2)
 
@@ -107,7 +109,7 @@ GPL v3
 * やねうら王 NNUE版 思考エンジン (https://github.com/yaneurao/YaneuraOu)
 * やねうら王 定跡ファイル (https://github.com/yaneurao/YaneuraOu)
 * tanuki- 詰将棋エンジン (https://github.com/yaneurao/YaneuraOu)
-* tanuki- WCSC29版 評価関数 (https://github.com/nodchip/tanuki-)
+* tanuki- WCSO1版 評価関数 (https://github.com/nodchip/tanuki-)
 * MyShogiSoundPlayer (https://github.com/jnory/MyShogiSoundPlayer)
 * フリーの画像データ (https://github.com/jnory/MyShogiImages)
 * フリーの音声データ (https://github.com/matarillo/MyShogiSound)

@@ -13,16 +13,14 @@ COMMIT_HASH=c3300bb1b8a92d22ed6549ac4179c1413911eb4f     #May 21, 2020
 PATCH=MyShogi.patch
 OS=Linux
 
-# 変数(DESTDIR, WORKDIR) の読み込み
+# 変数(DESTDIR, WORKDIR, LOGDIR) の読み込み
 BASEDIR=$(cd `dirname $0`/../..; pwd)
 . ${BASEDIR}/configure.sh
 # 関数の読み込み
 . ${BASEDIR}/tool.sh
 
-# インストール先ディレクトリの作成
-create_destdir
-# 作業用ディレクトリの作成
-create_workdir
+# インストール先ディレクトリなどを作成
+create_dirs $DESTDIR $WORKDIR $LOGDIR
 
 # パッケージディレクトリに移動する
 cd $BASEDIR/packages/$NAME
@@ -40,24 +38,24 @@ cd ${WORKDIR} >& /dev/null
 
 # $NAME ディレクトリが存在しないとき、ビルドを実行する
 if [ ! -d $NAME ]; then
-    git clone $URL $NAME >& ${NAME}.install.log
+    git clone $URL $NAME >& ${LOGDIR}/${NAME}.install.log
 
     cd $NAME >& /dev/null
-    (git checkout ${COMMIT_HASH} 2>&1) >> ../${NAME}.install.log
+    (git checkout ${COMMIT_HASH} 2>&1) >> ${LOGDIR}/${NAME}.install.log
 
     # MonoAPI.cs: htmlをブラウザで開く箇所を修正
     # EngineDefineEditDialog.Designer.cs: Step 4 の文章を修正
     # howto-use-external-engine.html: 文章を修正
     # howto-use-external-engine.md: 文章を修正
-    patch -p1 < ${WORKDIR}/$PATCH 2>&1 >> ../${NAME}.install.log
+    patch -p1 < ${WORKDIR}/$PATCH 2>&1 >> ${LOGDIR}/${NAME}.install.log
 
-    msbuild ./${NAME}.sln /p:Configuration=${OS} 2>&1 >> ../${NAME}.install.log
+    msbuild ./${NAME}.sln /p:Configuration=${OS} 2>&1 >> ${LOGDIR}/${NAME}.install.log
     # MyShogi.exe をインストールする
-    cp -pv ./${NAME}/bin/${OS}/${NAME}.exe ${DESTDIR} 2>&1 >> ../${NAME}.install.log
+    cp -pv ./${NAME}/bin/${OS}/${NAME}.exe ${DESTDIR} 2>&1 >> ${LOGDIR}/${NAME}.install.log
     # ヘルプファイル をインストールする
-    cp -pv ./${NAME}/html/howto-use-external-engine.html ${DESTDIR}/html/ 2>&1 >> ../${NAME}.install.log
+    cp -pv ./${NAME}/html/howto-use-external-engine.html ${DESTDIR}/html/ 2>&1 >> ${LOGDIR}/${NAME}.install.log
     # myshogi.sh をインストールする
-    cp -pv ${WORKDIR}/myshogi.sh ${DESTDIR} 2>&1 >> ../${NAME}.install.log
+    cp -pv ${WORKDIR}/myshogi.sh ${DESTDIR} 2>&1 >> ${LOGDIR}/${NAME}.install.log
 fi
 
 echo "完了"
