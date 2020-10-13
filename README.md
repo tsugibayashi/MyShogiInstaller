@@ -62,7 +62,9 @@ g++-9は[レポジトリ](ppa:ubuntu-toolchain-r/test)を使用してインス�
 
 (5) ./packages/engine-tanuki-mate/pkgfile.sh および ./packages/engine-tanuki-wcso1/pkgfile.sh を開き、下記変数を修正します。
 
-  ARCHLIST: ビルドするCPU拡張機能の種類 (デフォルト値は avx2)
+| 変数 | 説明 | デフォルト値 |
+----|----|----
+| ARCHLIST | ビルドするCPU拡張機能の種類 | avx2 |
 
 (6) 以下のコマンドを実行し、MyShogi、および、その関連ファイルをインストールします。
 
