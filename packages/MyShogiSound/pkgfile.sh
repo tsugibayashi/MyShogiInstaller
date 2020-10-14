@@ -17,7 +17,7 @@ BASEDIR=$(cd `dirname $0`/../..; pwd)
 # インストール先ディレクトリなどを作成
 create_dirs $DESTDIR $WORKDIR $LOGDIR
 
-echo -n "音声データをダウンロードしています ... "
+echo -n "音声データをインストールしています ... "
 
 # 作業用ディレクトリに移動する
 cd ${WORKDIR} >& /dev/null

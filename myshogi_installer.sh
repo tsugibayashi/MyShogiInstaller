@@ -16,7 +16,8 @@ function print_usage() {
     echo "    YaneuraOu_true_book  : 真やねうら王 定跡のインストール" 1>&2
     echo "    engine-tanuki-mate   : tanuki-詰将棋エンジンのインストール" 1>&2
     echo "    MyShogiSoundPlayer   : SoundPlayerのインストール" 1>&2
-    echo "    MyShogiImages        : 画像データのインストール" 1>&2
+    echo "    MyShogiImages-jnory  : 画像データ(jnory)のインストール" 1>&2
+    echo "    MyShogiImages-ts     : 画像データ(tsugibayashi)のインストール" 1>&2
     echo "    MyShogiSound         : 音声データのインストール" 1>&2
     echo "    ----------------------------------------------------------------" 1>&2
     echo "    以降のソフトウェアは不要 (旧バージョンで使用していたもの)" 1>&2
@@ -29,8 +30,8 @@ function print_usage() {
 set -e
 
 ### variables
-#INSTALL_PACKAGES="prerequisites MyShogi engine-tanuki-wcsc29 eval-tanuki-wcsc29 YaneuraOu_std_book YaneuraOu_large_book YaneuraOu_true_book YaneuraOu_700t_book engine-tanuki-mate MyShogiSoundPlayer MyShogiImages MyShogiSound"
-INSTALL_PACKAGES="prerequisites MyShogi engine-tanuki-wcso1 eval-tanuki-wcso1 YaneuraOu_std_book YaneuraOu_large_book YaneuraOu_true_book engine-tanuki-mate MyShogiSoundPlayer MyShogiImages MyShogiSound"
+#INSTALL_PACKAGES="prerequisites MyShogi engine-tanuki-wcsc29 eval-tanuki-wcsc29 YaneuraOu_std_book YaneuraOu_large_book YaneuraOu_true_book YaneuraOu_700t_book engine-tanuki-mate MyShogiSoundPlayer MyShogiImages-jnory MyShogiSound"
+INSTALL_PACKAGES="prerequisites MyShogi engine-tanuki-wcso1 eval-tanuki-wcso1 YaneuraOu_std_book YaneuraOu_large_book YaneuraOu_true_book engine-tanuki-mate MyShogiSoundPlayer MyShogiImages-jnory MyShogiImages-ts MyShogiSound"
 
 # $BASEDIR の設定
 BASEDIR=$(cd `dirname $0`; pwd)

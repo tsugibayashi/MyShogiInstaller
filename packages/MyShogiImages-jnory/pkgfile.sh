@@ -4,7 +4,7 @@
 set -e
 
 # variables
-NAME=MyShogiImages
+NAME=MyShogiImages-jnory
 URL=https://github.com/jnory/MyShogiImages.git
 COMMIT_HASH=2b53ec8653509c97e9717d1bf485b7e9027ce163
 
@@ -17,7 +17,7 @@ BASEDIR=$(cd `dirname $0`/../..; pwd)
 # インストール先ディレクトリなどを作成
 create_dirs $DESTDIR $WORKDIR $LOGDIR
 
-echo -n "画像データをダウンロードしています ... "
+echo -n "画像データ(jnory)をインストールしています ... "
 
 # 作業用ディレクトリに移動する
 cd ${WORKDIR} >& /dev/null
@@ -30,6 +30,7 @@ if [ ! -d $NAME ]; then
     (git checkout ${COMMIT_HASH} 2>&1) >> ${LOGDIR}/${NAME}.install.log
 
     # 画像データをコピーする
+    # 注意事項: 既存画像は上書きされる
     cd ${WORKDIR} >& /dev/null
     cp -pv $NAME/*.png ${DESTDIR}/image/ 2>&1 >> ${LOGDIR}/${NAME}.install.log
 fi
