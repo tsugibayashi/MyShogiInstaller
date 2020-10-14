@@ -10,7 +10,11 @@ COMMIT_HASH=c3300bb1b8a92d22ed6549ac4179c1413911eb4f     #May 21, 2020
 #COMMIT_HASH=03f4c8c56546ac4685048bcdcf68f83440b1f3cb    #Feb  9, 2020
 #COMMIT_HASH=77ca6b71b65e1203dde9f17d124c40340c1f981f    #Jan 28, 2020
 #COMMIT_HASH=3a9e7b17b8a6daa809bfce391c68bec88c4302c4    #Nov 28, 2018
-PATCH=MyShogi.patch
+PATCH1=MonoAPI.patch
+PATCH2=EngineDefineEditDialog.Designer.cs.patch
+PATCH3=DisplaySettingDialog.Designer.cs.patch
+PATCH4=OperationSettingDialog.Designer.cs.patch
+PATCH5=howto-use-external-engine.patch
 OS=Linux
 
 # 変数(DESTDIR, WORKDIR, LOGDIR) の読み込み
@@ -28,8 +32,12 @@ cd $BASEDIR/packages/$NAME
 # myshogi.sh を作業用ディレクトリにコピーする
 cp -p myshogi.sh ${WORKDIR}
 
-# $PATCH を作業用ディレクトリにコピーする
-cp -p $PATCH ${WORKDIR}
+# パッチファイルを作業用ディレクトリにコピーする
+cp -p $PATCH1 ${WORKDIR}
+cp -p $PATCH2 ${WORKDIR}
+cp -p $PATCH3 ${WORKDIR}
+cp -p $PATCH4 ${WORKDIR}
+cp -p $PATCH5 ${WORKDIR}
 
 echo -n "MyShogiをインストールしています ... "
 
@@ -44,10 +52,16 @@ if [ ! -d $NAME ]; then
     (git checkout ${COMMIT_HASH} 2>&1) >> ${LOGDIR}/${NAME}.install.log
 
     # MonoAPI.cs: htmlをブラウザで開く箇所を修正
+    patch -p1 < ${WORKDIR}/$PATCH1 2>&1 >> ${LOGDIR}/${NAME}.install.log
     # EngineDefineEditDialog.Designer.cs: Step 4 の文章を修正
+    patch -p1 < ${WORKDIR}/$PATCH2 2>&1 >> ${LOGDIR}/${NAME}.install.log
+    # DisplaySettingDialog.Designer.cs: 設定->表示設定 の枠サイズを修正
+    patch -p1 < ${WORKDIR}/$PATCH3 2>&1 >> ${LOGDIR}/${NAME}.install.log
+    # OperationSettingDialog.Designer.cs.patch: 設定->操作設定 の枠サイズを修正
+    patch -p1 < ${WORKDIR}/$PATCH4 2>&1 >> ${LOGDIR}/${NAME}.install.log
     # howto-use-external-engine.html: 文章を修正
     # howto-use-external-engine.md: 文章を修正
-    patch -p1 < ${WORKDIR}/$PATCH 2>&1 >> ${LOGDIR}/${NAME}.install.log
+    patch -p1 < ${WORKDIR}/$PATCH5 2>&1 >> ${LOGDIR}/${NAME}.install.log
 
     msbuild ./${NAME}.sln /p:Configuration=${OS} 2>&1 >> ${LOGDIR}/${NAME}.install.log
     # MyShogi.exe をインストールする

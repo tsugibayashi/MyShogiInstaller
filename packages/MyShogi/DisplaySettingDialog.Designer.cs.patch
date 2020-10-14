@@ -1,0 +1,349 @@
+--- MyShogi.org/MyShogi/View/Win2D/Setting/DisplaySettingDialog.Designer.cs	2020-10-14 09:47:39.637602186 +0900
++++ MyShogi/MyShogi/View/Win2D/Setting/DisplaySettingDialog.Designer.cs	2020-10-14 09:35:07.537934117 +0900
+@@ -28,6 +28,13 @@
+         /// </summary>
+         private void InitializeComponent()
+         {
++            // フォントタブ以外の枠のサイズ
++            int groupBoxWidth = 1078;
++            int groupBoxHeight = 170;
++            // フォントタブの枠のサイズ
++            int fontSelectWidth = 1300;
++            int fontSelectHeight = 42;
++
+             this.tabControl1 = new System.Windows.Forms.TabControl();
+             this.tabPage1 = new System.Windows.Forms.TabPage();
+             this.tabPage2 = new System.Windows.Forms.TabPage();
+@@ -139,7 +146,7 @@
+         "キャラメル,board_color_type_3.png,キャラメル色に近づけます",
+         "明るめの木,board_color_type_4.png,明るめの木の色に近づけます",
+         "プラスチック,board_color_type_5.png,プラスチック風の色に近づけます"};
+-            this.richSelector22.Size = new System.Drawing.Size(772, 110);
++            this.richSelector22.Size = new System.Drawing.Size(groupBoxWidth, groupBoxHeight);
+             this.richSelector22.TabIndex = 1;
+             //
+             // richSelector4
+@@ -151,7 +158,7 @@
+             this.richSelector4.SelectionTexts = new string[] {
+         "白色,board_image_ver_1.png,将棋盤を白色っぽい色にします。",
+         "黄色,board_image_ver_2.png,将棋盤を黄色っぽい色にします。"};
+-            this.richSelector4.Size = new System.Drawing.Size(772, 110);
++            this.richSelector4.Size = new System.Drawing.Size(772, groupBoxHeight);
+             this.richSelector4.TabIndex = 0;
+             //
+             // richSelector1
+@@ -164,7 +171,7 @@
+         "非表示,rank_style_0.png,段・筋を表示しません。",
+         "標準,rank_style_1.png,段を漢数字で表示します。",
+         "Chess式,rank_style_2.png,段をアルファベットで表示します(SFEN方式)"};
+-            this.richSelector1.Size = new System.Drawing.Size(772, 110);
++            this.richSelector1.Size = new System.Drawing.Size(772, groupBoxHeight);
+             this.richSelector1.TabIndex = 0;
+             //
+             // tabPage2
+@@ -192,7 +199,7 @@
+         "キャラメル,tatami_color_type_3.png,キャラメル色に近づけます",
+         "古めの畳,tatami_color_type_4.png,古めの畳の色に近づけます",
+         "新しめの畳,tatami_color_type_5.png,新しめの畳の色に近づけます"};
+-            this.richSelector23.Size = new System.Drawing.Size(772, 110);
++            this.richSelector23.Size = new System.Drawing.Size(groupBoxWidth, groupBoxHeight);
+             this.richSelector23.TabIndex = 4;
+             //
+             // richSelector5
+@@ -204,7 +211,7 @@
+             this.richSelector5.SelectionTexts = new string[] {
+         "薄い,tatami_image_ver_1.png,畳の色を薄めの色にします。",
+         "濃い,tatami_image_ver_2.png,畳の色を濃いめの色にします。"};
+-            this.richSelector5.Size = new System.Drawing.Size(772, 110);
++            this.richSelector5.Size = new System.Drawing.Size(772, groupBoxHeight);
+             this.richSelector5.TabIndex = 3;
+             //
+             // tabPage3
+@@ -230,7 +237,7 @@
+             this.richSelector18.SelectionTexts = new string[] {
+         "浮かせる,picked_piece_image_ver_0.png,移動元の升で少し浮かせます。",
+         "マウス追随,picked_piece_image_ver_1.png,マウスカーソルに追随させます。"};
+-            this.richSelector18.Size = new System.Drawing.Size(772, 110);
++            this.richSelector18.Size = new System.Drawing.Size(772, groupBoxHeight);
+             this.richSelector18.TabIndex = 2;
+             //
+             // richSelector8
+@@ -242,7 +249,7 @@
+             this.richSelector8.SelectionTexts = new string[] {
+         "なし,piece_attack_image_ver_0.png,通常の状態です。",
+         "あり,piece_attack_image_ver_1.png,駒の移動できる方角がわかる赤いマーカーを表示します。"};
+-            this.richSelector8.Size = new System.Drawing.Size(772, 110);
++            this.richSelector8.Size = new System.Drawing.Size(772, groupBoxHeight);
+             this.richSelector8.TabIndex = 1;
+             //
+             // richSelector21
+@@ -258,7 +265,7 @@
+         "キャラメル,piece_color_type_3.png,キャラメル色に近づけます",
+         "明るめの木,piece_color_type_4.png,明るめの木の色に近づけます",
+         "プラスチック,piece_color_type_5.png,プラスチック風の色に近づけます"};
+-            this.richSelector21.Size = new System.Drawing.Size(772, 110);
++            this.richSelector21.Size = new System.Drawing.Size(groupBoxWidth, groupBoxHeight);
+             this.richSelector21.TabIndex = 1;
+             //
+             // richSelector7
+@@ -270,7 +277,7 @@
+             this.richSelector7.SelectionTexts = new string[] {
+         "黒,pro_piece_color_style_1.png,成り駒の文字の色を黒にします。",
+         "赤,pro_piece_color_style_2.png,成り駒の文字の色を赤にします。"};
+-            this.richSelector7.Size = new System.Drawing.Size(772, 110);
++            this.richSelector7.Size = new System.Drawing.Size(772, groupBoxHeight);
+             this.richSelector7.TabIndex = 1;
+             //
+             // richSelector6
+@@ -283,7 +290,7 @@
+         "二文字駒,piece_image_ver_1.png,駒を二文字駒にします。",
+         "一文字駒,piece_image_ver_2.png,駒を一文字駒にします。",
+         "英文字駒,piece_image_ver_3.png,駒をアルファベットの駒(SFENで使われている文字)にします。"};
+-            this.richSelector6.Size = new System.Drawing.Size(772, 110);
++            this.richSelector6.Size = new System.Drawing.Size(772, groupBoxHeight);
+             this.richSelector6.TabIndex = 1;
+             //
+             // tabPage4
+@@ -312,7 +319,7 @@
+         "パターン3,picked_move_to_style_3.png,移動できない升をかなり暗くします",
+         "パターン4,picked_move_to_style_4.png,移動できる升を少し明るくします",
+         "パターン5,picked_move_to_style_5.png,移動できる升をかなり明るくします"};
+-            this.richSelector12.Size = new System.Drawing.Size(772, 110);
++            this.richSelector12.Size = new System.Drawing.Size(groupBoxWidth, groupBoxHeight);
+             this.richSelector12.TabIndex = 5;
+             //
+             // richSelector11
+@@ -326,7 +333,7 @@
+         "黄色,picked_move_from_style_1.png,駒を掴んだ時の移動元の升を朱色にします。",
+         "青色,picked_move_from_style_2.png,駒を掴んだ時の移動先の升を青色にします。",
+         "緑色,picked_move_from_style_3.png,駒を掴んだ時の移動先の升を緑色にします。"};
+-            this.richSelector11.Size = new System.Drawing.Size(772, 110);
++            this.richSelector11.Size = new System.Drawing.Size(772, groupBoxHeight);
+             this.richSelector11.TabIndex = 4;
+             //
+             // richSelector10
+@@ -340,7 +347,7 @@
+         "朱色,last_move_to_style_1.png,最終手の移動先の升を朱色にします。",
+         "青色,last_move_to_style_2.png,最終手の移動先の升を青色にします。",
+         "緑色,last_move_to_style_3.png,最終手の移動先の升を緑色にします。"};
+-            this.richSelector10.Size = new System.Drawing.Size(772, 110);
++            this.richSelector10.Size = new System.Drawing.Size(772, groupBoxHeight);
+             this.richSelector10.TabIndex = 3;
+             //
+             // richSelector9
+@@ -354,7 +361,7 @@
+         "朱色,last_move_from_style_1.png,最終手の移動元の升を朱色にします。",
+         "青色,last_move_from_style_2.png,最終手の移動元の升を青色にします。",
+         "緑色,last_move_from_style_3.png,最終手の移動元の升を緑色にします。"};
+-            this.richSelector9.Size = new System.Drawing.Size(772, 110);
++            this.richSelector9.Size = new System.Drawing.Size(772, groupBoxHeight);
+             this.richSelector9.TabIndex = 2;
+             //
+             // tabPage5
+@@ -376,7 +383,7 @@
+             this.richSelector24.SelectionTexts = new string[] {
+         "しない,promote_dialog_style_0.png,上下反転しません。",
+         "する,promote_dialog_style_1.png,後手(相手側)は上下反転します。"};
+-            this.richSelector24.Size = new System.Drawing.Size(772, 110);
++            this.richSelector24.Size = new System.Drawing.Size(772, groupBoxHeight);
+             this.richSelector24.TabIndex = 4;
+             //
+             // tabPage6
+@@ -400,7 +407,7 @@
+         "なし,turn_mark_style_0.png,対局者名に先後の記号をつけません。",
+         "☗と☖,turn_mark_style_1.png,対局者名の先頭に先後の記号をつけます。",
+         "▲と△,turn_mark_style_2.png,対局者名の先頭に先後の記号をつけます。"};
+-            this.richSelector14.Size = new System.Drawing.Size(772, 110);
++            this.richSelector14.Size = new System.Drawing.Size(772, groupBoxHeight);
+             this.richSelector14.TabIndex = 4;
+             //
+             // richSelector13
+@@ -413,7 +420,7 @@
+         "なし,turn_style_0.png,手番側の表現をしません。",
+         "手番マーク,turn_style_1.png,手番側の対局者に手番マークを表示します。",
+         "名前を赤字,turn_style_2.png,手番側の対局者名を赤い文字にします。"};
+-            this.richSelector13.Size = new System.Drawing.Size(772, 110);
++            this.richSelector13.Size = new System.Drawing.Size(772, groupBoxHeight);
+             this.richSelector13.TabIndex = 3;
+             //
+             // tabPage7
+@@ -439,7 +446,7 @@
+             this.richSelector25.SelectionTexts = new string[] {
+         "しない,kifwindow_totaltime_style_0.png,棋譜ウインドウに総消費時間を表示しません。",
+         "する,kifwindow_totaltime_style_1.png,棋譜ウインドウに総消費時間を表示します。"};
+-            this.richSelector25.Size = new System.Drawing.Size(772, 110);
++            this.richSelector25.Size = new System.Drawing.Size(772, groupBoxHeight);
+             this.richSelector25.TabIndex = 2;
+             //
+             // richSelector3
+@@ -454,7 +461,7 @@
+         "簡易(KIF),cons_window_kif_style_2.png,移動元の升が書かれている簡易な棋譜表記にします。",
+         "CSA,cons_window_kif_style_3.png,移動元の升が書かれている簡易な棋譜表記にします。",
+         "SFEN,cons_window_kif_style_4.png,チェスで使われているSFEN方式の棋譜表記にします。"};
+-            this.richSelector3.Size = new System.Drawing.Size(772, 110);
++            this.richSelector3.Size = new System.Drawing.Size(groupBoxWidth, groupBoxHeight);
+             this.richSelector3.TabIndex = 1;
+             //
+             // richSelector2
+@@ -469,7 +476,7 @@
+         "簡易(KIF),kifwindow_kif_style_2.png,移動元の升が書かれている簡易な棋譜表記にします。",
+         "CSA,kifwindow_kif_style_3.png,CSA形式の棋譜表記にします。",
+         "SFEN,kifwindow_kif_style_4.png,チェスで使われているSFEN方式の棋譜表記にします。"};
+-            this.richSelector2.Size = new System.Drawing.Size(772, 110);
++            this.richSelector2.Size = new System.Drawing.Size(groupBoxWidth, groupBoxHeight);
+             this.richSelector2.TabIndex = 1;
+             //
+             // tabPage8
+@@ -492,7 +499,7 @@
+             this.richSelector17.SelectionTexts = new string[] {
+         "なし,game_piece_toss_effect_0.png,振り駒で手番を決める時の画面エフェクトなし。",
+         "あり,game_piece_toss_effect_1.png,振り駒で手番を決める時の画面エフェクトあり。"};
+-            this.richSelector17.Size = new System.Drawing.Size(772, 110);
++            this.richSelector17.Size = new System.Drawing.Size(772, groupBoxHeight);
+             this.richSelector17.TabIndex = 5;
+             //
+             // richSelector16
+@@ -504,7 +511,7 @@
+             this.richSelector16.SelectionTexts = new string[] {
+         "なし,game_greeting_effect_style_0.png,対局開始・終了の画面エフェクトなし。",
+         "あり,game_greeting_effect_style_1.png,対局開始・終了の画面エフェクトあり。"};
+-            this.richSelector16.Size = new System.Drawing.Size(772, 110);
++            this.richSelector16.Size = new System.Drawing.Size(772, groupBoxHeight);
+             this.richSelector16.TabIndex = 4;
+             //
+             // tabPage9
+@@ -527,7 +534,7 @@
+             this.richSelector20.SelectionTexts = new string[] {
+         "表示しない,eval_jugdement_style_0.png,表示しません",
+         "表示する,eval_jugdement_style_1.png,評価値の左側に「形勢互角」「先手有利」などの文字を表示します。"};
+-            this.richSelector20.Size = new System.Drawing.Size(772, 110);
++            this.richSelector20.Size = new System.Drawing.Size(772, groupBoxHeight);
+             this.richSelector20.TabIndex = 4;
+             //
+             // richSelector15
+@@ -539,7 +546,7 @@
+             this.richSelector15.SelectionTexts = new string[] {
+         "後手側,eval_sign_style_0.png,後手側の評価値は、自分から見た値(プラスだと後手良しの意味)になります。",
+         "先手側,eval_sign_style_1.png,後手側の評価値は、先手から見た値(プラスだと先手良しの意味)になります。"};
+-            this.richSelector15.Size = new System.Drawing.Size(772, 110);
++            this.richSelector15.Size = new System.Drawing.Size(772, groupBoxHeight);
+             this.richSelector15.TabIndex = 3;
+             //
+             // tabPage10
+@@ -620,7 +627,7 @@
+             this.fontSelectionConrol12.Location = new System.Drawing.Point(8, 383);
+             this.fontSelectionConrol12.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+             this.fontSelectionConrol12.Name = "fontSelectionConrol12";
+-            this.fontSelectionConrol12.Size = new System.Drawing.Size(1155, 39);
++            this.fontSelectionConrol12.Size = new System.Drawing.Size(fontSelectWidth, fontSelectHeight);
+             this.fontSelectionConrol12.TabIndex = 0;
+             //
+             // fontSelectionConrol11
+@@ -629,7 +636,7 @@
+             this.fontSelectionConrol11.Description = "デバッグウインドウ";
+             this.fontSelectionConrol11.Location = new System.Drawing.Point(8, 353);
+             this.fontSelectionConrol11.Name = "fontSelectionConrol11";
+-            this.fontSelectionConrol11.Size = new System.Drawing.Size(770, 26);
++            this.fontSelectionConrol11.Size = new System.Drawing.Size(fontSelectWidth, fontSelectHeight);
+             this.fontSelectionConrol11.TabIndex = 0;
+             //
+             // fontSelectionConrol10
+@@ -637,7 +644,7 @@
+             this.fontSelectionConrol10.Description = "ToolTip(マウスカーソルをhoverさせた時の説明)";
+             this.fontSelectionConrol10.Location = new System.Drawing.Point(8, 323);
+             this.fontSelectionConrol10.Name = "fontSelectionConrol10";
+-            this.fontSelectionConrol10.Size = new System.Drawing.Size(770, 27);
++            this.fontSelectionConrol10.Size = new System.Drawing.Size(fontSelectWidth, fontSelectHeight);
+             this.fontSelectionConrol10.TabIndex = 4;
+             //
+             // fontSelectionConrol9
+@@ -645,7 +652,7 @@
+             this.fontSelectionConrol9.Description = "検討ウインドウ";
+             this.fontSelectionConrol9.Location = new System.Drawing.Point(8, 293);
+             this.fontSelectionConrol9.Name = "fontSelectionConrol9";
+-            this.fontSelectionConrol9.Size = new System.Drawing.Size(770, 27);
++            this.fontSelectionConrol9.Size = new System.Drawing.Size(fontSelectWidth, fontSelectHeight);
+             this.fontSelectionConrol9.TabIndex = 3;
+             //
+             // fontSelectionConrol8
+@@ -654,7 +661,7 @@
+             this.fontSelectionConrol8.Description = "棋譜ウインドウ";
+             this.fontSelectionConrol8.Location = new System.Drawing.Point(8, 263);
+             this.fontSelectionConrol8.Name = "fontSelectionConrol8";
+-            this.fontSelectionConrol8.Size = new System.Drawing.Size(770, 26);
++            this.fontSelectionConrol8.Size = new System.Drawing.Size(fontSelectWidth, fontSelectHeight);
+             this.fontSelectionConrol8.TabIndex = 0;
+             //
+             // fontSelectionConrol7
+@@ -663,7 +670,7 @@
+             this.fontSelectionConrol7.Description = "メッセージダイアログ";
+             this.fontSelectionConrol7.Location = new System.Drawing.Point(8, 233);
+             this.fontSelectionConrol7.Name = "fontSelectionConrol7";
+-            this.fontSelectionConrol7.Size = new System.Drawing.Size(770, 26);
++            this.fontSelectionConrol7.Size = new System.Drawing.Size(fontSelectWidth, fontSelectHeight);
+             this.fontSelectionConrol7.TabIndex = 0;
+             //
+             // fontSelectionConrol6
+@@ -672,7 +679,7 @@
+             this.fontSelectionConrol6.Description = "設定ダイアログ関連";
+             this.fontSelectionConrol6.Location = new System.Drawing.Point(8, 203);
+             this.fontSelectionConrol6.Name = "fontSelectionConrol6";
+-            this.fontSelectionConrol6.Size = new System.Drawing.Size(770, 26);
++            this.fontSelectionConrol6.Size = new System.Drawing.Size(fontSelectWidth, fontSelectHeight);
+             this.fontSelectionConrol6.TabIndex = 0;
+             //
+             // fontSelectionConrol5
+@@ -681,7 +688,7 @@
+             this.fontSelectionConrol5.Description = "メインウインドウ(対局者名など)";
+             this.fontSelectionConrol5.Location = new System.Drawing.Point(8, 173);
+             this.fontSelectionConrol5.Name = "fontSelectionConrol5";
+-            this.fontSelectionConrol5.Size = new System.Drawing.Size(770, 26);
++            this.fontSelectionConrol5.Size = new System.Drawing.Size(fontSelectWidth, fontSelectHeight);
+             this.fontSelectionConrol5.TabIndex = 0;
+             //
+             // fontSelectionConrol4
+@@ -690,7 +697,7 @@
+             this.fontSelectionConrol4.Description = "ミニ盤面の下部にあるボタン";
+             this.fontSelectionConrol4.Location = new System.Drawing.Point(8, 143);
+             this.fontSelectionConrol4.Name = "fontSelectionConrol4";
+-            this.fontSelectionConrol4.Size = new System.Drawing.Size(770, 26);
++            this.fontSelectionConrol4.Size = new System.Drawing.Size(fontSelectWidth, fontSelectHeight);
+             this.fontSelectionConrol4.TabIndex = 0;
+             //
+             // fontSelectionConrol3
+@@ -699,7 +706,7 @@
+             this.fontSelectionConrol3.Description = "ミニ盤面上のタブの文字列";
+             this.fontSelectionConrol3.Location = new System.Drawing.Point(8, 113);
+             this.fontSelectionConrol3.Name = "fontSelectionConrol3";
+-            this.fontSelectionConrol3.Size = new System.Drawing.Size(770, 26);
++            this.fontSelectionConrol3.Size = new System.Drawing.Size(fontSelectWidth, fontSelectHeight);
+             this.fontSelectionConrol3.TabIndex = 0;
+             //
+             // fontSelectionConrol2
+@@ -708,7 +715,7 @@
+             this.fontSelectionConrol2.Description = "メインウインドウの上部にあるボタン";
+             this.fontSelectionConrol2.Location = new System.Drawing.Point(8, 83);
+             this.fontSelectionConrol2.Name = "fontSelectionConrol2";
+-            this.fontSelectionConrol2.Size = new System.Drawing.Size(770, 26);
++            this.fontSelectionConrol2.Size = new System.Drawing.Size(fontSelectWidth, fontSelectHeight);
+             this.fontSelectionConrol2.TabIndex = 0;
+             //
+             // fontSelectionConrol1
+@@ -717,7 +724,7 @@
+             this.fontSelectionConrol1.Description = "メインメニュー";
+             this.fontSelectionConrol1.Location = new System.Drawing.Point(8, 53);
+             this.fontSelectionConrol1.Name = "fontSelectionConrol1";
+-            this.fontSelectionConrol1.Size = new System.Drawing.Size(770, 26);
++            this.fontSelectionConrol1.Size = new System.Drawing.Size(fontSelectWidth, fontSelectHeight);
+             this.fontSelectionConrol1.TabIndex = 0;
+             //
+             // richSelector19
+@@ -729,7 +736,7 @@
+             this.richSelector19.SelectionTexts = new string[] {
+         "開始局面,kifu_open_moves_0.png,棋譜の開始局面にします。",
+         "終局図,kifu_open_moves_1.png,棋譜の最終手の局面にします。"};
+-            this.richSelector19.Size = new System.Drawing.Size(772, 110);
++            this.richSelector19.Size = new System.Drawing.Size(772, groupBoxHeight);
+             this.richSelector19.TabIndex = 3;
+             //
+             // DisplaySettingDialog

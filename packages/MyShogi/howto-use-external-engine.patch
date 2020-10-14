@@ -1,0 +1,31 @@
+diff -Nru MyShogi.org/MyShogi/html/howto-use-external-engine.html MyShogi/MyShogi/html/howto-use-external-engine.html
+--- MyShogi.org/MyShogi/html/howto-use-external-engine.html	2020-10-12 15:32:18.152392036 +0900
++++ MyShogi/MyShogi/html/howto-use-external-engine.html	2020-10-12 15:31:46.628698392 +0900
+@@ -875,11 +875,11 @@
+ <td>64bit版 AVX2以上用</td>
+ </tr>
+ <tr>
+-<td>engine/Apery/engine_define.xml</td>
++<td>engine/apery/engine_define.xml</td>
+ <td>エンジン定義ファイル</td>
+ </tr>
+ <tr>
+-<td>engine/Apery/banner.png</td>
++<td>engine/apery/banner.png</td>
+ <td>バナー画像(任意)</td>
+ </tr>
+ </tbody>
+diff -Nru MyShogi.org/MyShogi/html/howto-use-external-engine.md MyShogi/MyShogi/html/howto-use-external-engine.md
+--- MyShogi.org/MyShogi/html/howto-use-external-engine.md	2020-10-12 15:32:18.152392036 +0900
++++ MyShogi/MyShogi/html/howto-use-external-engine.md	2020-10-12 15:31:57.192595395 +0900
+@@ -344,8 +344,8 @@
+ | engine/apery/apery_sse41.exe | 64bit版 SSE4.1以上用 |
+ | engine/apery/apery_sse42.exe | 64bit版 SSE4.2以上用 |
+ | engine/apery/apery_avx2.exe | 64bit版 AVX2以上用 |
+-| engine/Apery/engine_define.xml | エンジン定義ファイル |
+-| engine/Apery/banner.png | バナー画像(任意) |
++| engine/apery/engine_define.xml | エンジン定義ファイル |
++| engine/apery/banner.png | バナー画像(任意) |
+ 
+ そのあと、Step 3.で書き出されたエンジン定義ファイルを思考エンジン本体があるフォルダに移動させます。
+ 
