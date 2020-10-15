@@ -28,6 +28,7 @@ MyShogiのビルドを行う前に、以下のパッケージをインストー�
 * unar (7zファイルの展開に使用します)
 * libpulse-dev
 * xclip (ビルドには不要ですが、読み筋のコピーのために必要です)
+* fonts-noto (表示するフォントとして使用します)
 
 monodevelopは[公式サイト](https://www.mono-project.com/download)
 に書かれた手順を参考にしてインストールして下さい。

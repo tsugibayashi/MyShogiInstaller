@@ -91,6 +91,15 @@ function check_prerequisites() {
     fi
     echo "ok" 1>&2
 
+    echo -n "fonts-noto ... " 1>&2
+    if ! (dpkg -l | grep fonts-noto >& /dev/null); then
+        echo "NG" 1>&2
+        echo "下記コマンドを実行して、fonts-notoをインストールしてください:"
+        echo "    $ sudo apt install fonts-noto"
+        exit 1
+    fi
+    echo "ok" 1>&2
+
     echo "必要なコマンドは揃っているようです" 1>&2
 }
 # }}}

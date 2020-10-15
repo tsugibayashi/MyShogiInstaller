@@ -1,0 +1,20 @@
+--- MyShogi.org/MyShogi/View/Win2D/Setting/TimeSettingControl.Designer.cs	2020-10-15 10:32:47.820157078 +0900
++++ MyShogi/MyShogi/View/Win2D/Setting/TimeSettingControl.Designer.cs	2020-10-15 12:07:26.314670470 +0900
+@@ -229,7 +229,7 @@
+             // radioButton2
+             // 
+             this.radioButton2.AutoSize = true;
+-            this.radioButton2.Location = new System.Drawing.Point(12, 66);
++            this.radioButton2.Location = new System.Drawing.Point(12, 60);
+             this.radioButton2.Name = "radioButton2";
+             this.radioButton2.Size = new System.Drawing.Size(92, 16);
+             this.radioButton2.TabIndex = 1;
+@@ -242,7 +242,7 @@
+             // 
+             this.radioButton1.AutoSize = true;
+             this.radioButton1.Checked = true;
+-            this.radioButton1.Location = new System.Drawing.Point(12, 43);
++            this.radioButton1.Location = new System.Drawing.Point(12, 37);
+             this.radioButton1.Name = "radioButton1";
+             this.radioButton1.Size = new System.Drawing.Size(58, 16);
+             this.radioButton1.TabIndex = 0;

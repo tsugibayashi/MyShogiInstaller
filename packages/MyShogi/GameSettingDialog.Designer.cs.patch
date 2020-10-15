@@ -1,0 +1,90 @@
+--- MyShogi.org/MyShogi/View/Win2D/Setting/GameSettingDialog.Designer.cs	2020-10-15 10:32:47.820157078 +0900
++++ MyShogi/MyShogi/View/Win2D/Setting/GameSettingDialog.Designer.cs	2020-10-15 12:03:55.724423083 +0900
+@@ -28,6 +28,13 @@
+         /// </summary>
+         private void InitializeComponent()
+         {
++            // timeSettingControlの枠サイズ
++            int timeSettingControlWidth = 640;
++            int timeSettingControlHeight = 230;
++            // playerSettingControlの枠サイズ
++            int playerSettingControlWidth = 650;
++            int playerSettingControlHeight = 320;
++
+             this.components = new System.ComponentModel.Container();
+             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GameSettingDialog));
+             this.groupBox3 = new System.Windows.Forms.GroupBox();
+@@ -106,7 +113,7 @@
+             // radioButton7
+             // 
+             this.radioButton7.AutoSize = true;
+-            this.radioButton7.Location = new System.Drawing.Point(13, 69);
++            this.radioButton7.Location = new System.Drawing.Point(13, 63);
+             this.radioButton7.Name = "radioButton7";
+             this.radioButton7.Size = new System.Drawing.Size(69, 16);
+             this.radioButton7.TabIndex = 2;
+@@ -117,7 +124,7 @@
+             // radioButton6
+             // 
+             this.radioButton6.AutoSize = true;
+-            this.radioButton6.Location = new System.Drawing.Point(13, 46);
++            this.radioButton6.Location = new System.Drawing.Point(13, 40);
+             this.radioButton6.Name = "radioButton6";
+             this.radioButton6.Size = new System.Drawing.Size(85, 16);
+             this.radioButton6.TabIndex = 1;
+@@ -130,7 +137,7 @@
+             // 
+             this.radioButton5.AutoSize = true;
+             this.radioButton5.Checked = true;
+-            this.radioButton5.Location = new System.Drawing.Point(13, 23);
++            this.radioButton5.Location = new System.Drawing.Point(13, 17);
+             this.radioButton5.Name = "radioButton5";
+             this.radioButton5.Size = new System.Drawing.Size(71, 16);
+             this.radioButton5.TabIndex = 0;
+@@ -325,7 +332,9 @@
+             this.checkBox6.Name = "checkBox6";
+             this.checkBox6.Size = new System.Drawing.Size(131, 16);
+             this.checkBox6.TabIndex = 11;
+-            this.checkBox6.Text = "先後は振り駒で決める";
++            // 文末の"る"が表示されないため修正 (Monoのバグか)
++            //this.checkBox6.Text = "先後は振り駒で決める";
++            this.checkBox6.Text = "先後は振り駒で決めます";
+             this.toolTip1.SetToolTip(this.checkBox6, "対局前に先手・後手を振り駒で決めます。\r\n(先手・後手がランダムで決まります)");
+             this.checkBox6.UseVisualStyleBackColor = true;
+             // 
+@@ -362,7 +371,7 @@
+             this.playerSettingControl2.Location = new System.Drawing.Point(385, 0);
+             this.playerSettingControl2.Margin = new System.Windows.Forms.Padding(6);
+             this.playerSettingControl2.Name = "playerSettingControl2";
+-            this.playerSettingControl2.Size = new System.Drawing.Size(383, 190);
++            this.playerSettingControl2.Size = new System.Drawing.Size(playerSettingControlWidth, playerSettingControlHeight);
+             this.playerSettingControl2.TabIndex = 2;
+             // 
+             // playerSettingControl1
+@@ -371,7 +380,7 @@
+             this.playerSettingControl1.Location = new System.Drawing.Point(3, 0);
+             this.playerSettingControl1.Margin = new System.Windows.Forms.Padding(6);
+             this.playerSettingControl1.Name = "playerSettingControl1";
+-            this.playerSettingControl1.Size = new System.Drawing.Size(384, 190);
++            this.playerSettingControl1.Size = new System.Drawing.Size(playerSettingControlWidth, playerSettingControlHeight);
+             this.playerSettingControl1.TabIndex = 0;
+             // 
+             // timeSettingControl2
+@@ -380,7 +389,7 @@
+             this.timeSettingControl2.Location = new System.Drawing.Point(389, 353);
+             this.timeSettingControl2.Margin = new System.Windows.Forms.Padding(1, 2, 1, 2);
+             this.timeSettingControl2.Name = "timeSettingControl2";
+-            this.timeSettingControl2.Size = new System.Drawing.Size(379, 129);
++            this.timeSettingControl2.Size = new System.Drawing.Size(timeSettingControlWidth, timeSettingControlHeight);
+             this.timeSettingControl2.TabIndex = 14;
+             // 
+             // timeSettingControl1
+@@ -389,7 +398,7 @@
+             this.timeSettingControl1.Location = new System.Drawing.Point(6, 351);
+             this.timeSettingControl1.Margin = new System.Windows.Forms.Padding(1, 2, 1, 2);
+             this.timeSettingControl1.Name = "timeSettingControl1";
+-            this.timeSettingControl1.Size = new System.Drawing.Size(381, 131);
++            this.timeSettingControl1.Size = new System.Drawing.Size(timeSettingControlWidth, timeSettingControlHeight);
+             this.timeSettingControl1.TabIndex = 13;
+             // 
+             // GameSettingDialog

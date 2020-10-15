@@ -14,7 +14,9 @@ PATCH1=MonoAPI.patch
 PATCH2=EngineDefineEditDialog.Designer.cs.patch
 PATCH3=DisplaySettingDialog.Designer.cs.patch
 PATCH4=OperationSettingDialog.Designer.cs.patch
-PATCH5=howto-use-external-engine.patch
+PATCH5=GameSettingDialog.Designer.cs.patch
+PATCH6=TimeSettingControl.Designer.cs.patch
+PATCH7=howto-use-external-engine.patch
 OS=Linux
 
 # 変数(DESTDIR, WORKDIR, LOGDIR) の読み込み
@@ -38,6 +40,8 @@ cp -p $PATCH2 ${WORKDIR}
 cp -p $PATCH3 ${WORKDIR}
 cp -p $PATCH4 ${WORKDIR}
 cp -p $PATCH5 ${WORKDIR}
+cp -p $PATCH6 ${WORKDIR}
+cp -p $PATCH7 ${WORKDIR}
 
 echo -n "MyShogiをインストールしています ... "
 
@@ -51,17 +55,21 @@ if [ ! -d $NAME ]; then
     cd $NAME >& /dev/null
     (git checkout ${COMMIT_HASH} 2>&1) >> ${LOGDIR}/${NAME}.install.log
 
-    # MonoAPI.cs: htmlをブラウザで開く箇所を修正
+    # htmlをブラウザで開く箇所を修正
     patch -p1 < ${WORKDIR}/$PATCH1 2>&1 >> ${LOGDIR}/${NAME}.install.log
-    # EngineDefineEditDialog.Designer.cs: Step 4 の文章を修正
+    # 設定->外部思考エンジンの利用 のStep 4の文章を修正
     patch -p1 < ${WORKDIR}/$PATCH2 2>&1 >> ${LOGDIR}/${NAME}.install.log
-    # DisplaySettingDialog.Designer.cs: 設定->表示設定 の枠サイズを修正
+    # 設定->表示設定 の枠サイズを修正
     patch -p1 < ${WORKDIR}/$PATCH3 2>&1 >> ${LOGDIR}/${NAME}.install.log
-    # OperationSettingDialog.Designer.cs.patch: 設定->操作設定 の枠サイズを修正
+    # 設定->操作設定 の枠サイズを修正
     patch -p1 < ${WORKDIR}/$PATCH4 2>&1 >> ${LOGDIR}/${NAME}.install.log
+    # 対局->通常対局 の枠サイズを修正
+    patch -p1 < ${WORKDIR}/$PATCH5 2>&1 >> ${LOGDIR}/${NAME}.install.log
+    # 対局->通常対局 の文字の位置を調整
+    patch -p1 < ${WORKDIR}/$PATCH6 2>&1 >> ${LOGDIR}/${NAME}.install.log
     # howto-use-external-engine.html: 文章を修正
     # howto-use-external-engine.md: 文章を修正
-    patch -p1 < ${WORKDIR}/$PATCH5 2>&1 >> ${LOGDIR}/${NAME}.install.log
+    patch -p1 < ${WORKDIR}/$PATCH7 2>&1 >> ${LOGDIR}/${NAME}.install.log
 
     msbuild ./${NAME}.sln /p:Configuration=${OS} 2>&1 >> ${LOGDIR}/${NAME}.install.log
     # MyShogi.exe をインストールする
