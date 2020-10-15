@@ -114,8 +114,7 @@ GPL v3
 * tanuki- 詰将棋エンジン (https://github.com/yaneurao/YaneuraOu)
 * tanuki- WCSO1版 評価関数 (https://github.com/nodchip/tanuki-)
 * MyShogiSoundPlayer (https://github.com/jnory/MyShogiSoundPlayer)
-* フリーの画像データ1 (https://github.com/jnory/MyShogiImages)
-* フリーの画像データ2 (https://github.com/tsugibayashi/MyShogiImages)
+* フリーの画像データ (https://github.com/tsugibayashi/MyShogiImages)
 * フリーの音声データ (https://github.com/matarillo/MyShogiSound)
 
 ### 商用ライセンスを持っているのですが、それらの画像を使用できますか？

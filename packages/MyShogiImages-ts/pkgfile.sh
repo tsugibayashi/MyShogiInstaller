@@ -17,7 +17,7 @@ BASEDIR=$(cd `dirname $0`/../..; pwd)
 # インストール先ディレクトリなどを作成
 create_dirs $DESTDIR $WORKDIR $LOGDIR
 
-echo -n "画像データ(ts)をインストールしています ... "
+echo -n "画像データ(tsugibayashi)をインストールしています ... "
 
 # 作業用ディレクトリに移動する
 cd ${WORKDIR} >& /dev/null
