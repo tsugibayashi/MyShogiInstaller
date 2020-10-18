@@ -8,7 +8,7 @@ function check_prerequisites() {
     echo -n "mono ... " 1>&2
     if [[ ! `which mono` ]]; then
         echo "NG" 1>&2
-        echo "下記手順を参考にして、monodevelopをインストールしてください:"
+        echo "下記手順を参考にして monodevelop をインストールしてください:"
         echo "    https://www.monodevelop.com/download/"
         exit 1
     fi
@@ -24,7 +24,7 @@ function check_prerequisites() {
     echo -n "cmake ... " 1>&2
     if ! (cmake --version >& /dev/null); then
         echo "NG" 1>&2
-        echo "下記コマンドを実行して、cmakeをインストールしてください:"
+        echo "下記コマンドを実行して、cmake をインストールしてください:"
         echo "    $ sudo apt install cmake"
         exit 1
     fi
@@ -68,7 +68,7 @@ function check_prerequisites() {
     echo -n "unar ... " 1>&2
     if ! (unar -v >& /dev/null); then
         echo "NG" 1>&2
-        echo "下記コマンドを実行して、unarをインストールしてください:"
+        echo "下記コマンドを実行して、unar をインストールしてください:"
         echo "    $ sudo apt install unar"
         exit 1
     fi
@@ -76,7 +76,7 @@ function check_prerequisites() {
     echo -n "libpulse-dev ... " 1>&2
     if ! (dpkg -l | grep libpulse-dev >& /dev/null); then
         echo "NG" 1>&2
-        echo "下記コマンドを実行して、libpulse-devをインストールしてください:"
+        echo "下記コマンドを実行して、libpulse-dev をインストールしてください:"
         echo "    $ sudo apt install libpulse-dev"
         exit 1
     fi
@@ -85,7 +85,7 @@ function check_prerequisites() {
     echo -n "xclip ... " 1>&2
     if ! (xclip -version >& /dev/null); then
         echo "NG" 1>&2
-        echo "下記コマンドを実行して、xclipをインストールしてください:"
+        echo "下記コマンドを実行して、xclip をインストールしてください:"
         echo "    $ sudo apt install xclip"
         exit 1
     fi
@@ -94,7 +94,7 @@ function check_prerequisites() {
     echo -n "fonts-noto ... " 1>&2
     if ! (dpkg -l | grep fonts-noto >& /dev/null); then
         echo "NG" 1>&2
-        echo "下記コマンドを実行して、fonts-notoをインストールしてください:"
+        echo "下記コマンドを実行して、fonts-noto をインストールしてください:"
         echo "    $ sudo apt install fonts-noto"
         exit 1
     fi
