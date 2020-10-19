@@ -117,6 +117,10 @@ GPL v3
 * フリーの画像データ (https://github.com/tsugibayashi/MyShogiImages)
 * フリーの音声データ (https://github.com/matarillo/MyShogiSound)
 
+また、オプションとして以下ソフトウェアもインストールできます。
+
+* 魚沼産やねうら王 (https://github.com/yaneurao/YaneuraOu/releases/tag/20190212_k-p-256-32-32)
+
 ### 商用ライセンスを持っているのですが、それらの画像を使用できますか？
 
 MyShogiの画像データを"将棋神 やねうら王"の画像データに置き換えることができるはずです。
