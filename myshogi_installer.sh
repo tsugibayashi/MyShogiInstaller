@@ -19,6 +19,10 @@ function print_usage() {
     echo "    MyShogiImages-ts     : 画像データ(tsugibayashi)のインストール" 1>&2
     echo "    MyShogiSound         : 音声データのインストール" 1>&2
     echo "    ----------------------------------------------------------------" 1>&2
+    echo "    下記ソフトウェアはオプション" 1>&2
+    echo "    engine-YaneuraOu-nnue-kp256 : 外部思考エンジン(やねうら王NNUE(KP256)) のインストール" 1>&2
+    echo "    eval-YaneuraOu-nnue-kp256   : 評価関数(やねうら王NNUE(KP256)) のインストール" 1>&2
+    echo "    ----------------------------------------------------------------" 1>&2
     echo "    以降のソフトウェアは不要 (旧バージョンで使用していたもの)" 1>&2
     echo "    engine-tanuki-wcsc29 : 外部思考エンジン(tanuki- WCSC29版) のインストール (やねうら王NNUEを使用)" 1>&2
     echo "    eval-tanuki-wcsc29   : 評価関数(tanuki- WCSC29版) のインストール" 1>&2
