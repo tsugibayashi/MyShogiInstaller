@@ -124,6 +124,8 @@ GPL v3
 * Apery WCSC30版 (https://github.com/HiraokaTakuya/apery_rust)
 * tanuki- WCSC29版 (https://github.com/nodchip/tanuki-)
 * Kristallweizen改 V0.4 (https://github.com/Tama4649/Kristallweizen/)
+* やねうら王 NNUE-HalfKPE9型 思考エンジン (https://github.com/tttak/YaneuraOu/)
+* Qhapaq WCSO1版 (https://github.com/qhapaq-49/qhapaq-bin)
 
 ### 商用ライセンスを持っているのですが、それらの画像を使用できますか？
 
