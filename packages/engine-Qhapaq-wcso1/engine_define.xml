@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?><EngineDefine xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.datacontract.org/2004/07/MyShogi.Model.Shogi.EngineDefine"><BannerFileName>banner.png</BannerFileName><Description>第１回世界コンピュータ将棋オンライン大会(WCSO1)で４位の思考エンジンです。</Description><DescriptionSimple>Qhapaq WCSO1版</DescriptionSimple><DisplayName>Qhapaq WCSO1版</DisplayName><DisplayOrder>8010</DisplayOrder><EngineExeName>Qhapaq-wcso1-nnue-halfkpe9</EngineExeName><EngineOptionDescriptions><EngineOptionDescription><ComboboxDisplayName i:nil="true" /><Description>コンピューターが思考する時にハッシュメモリというものを使います。
+これは、一度調べた局面の情報を保存しておくために必要です。
+ハッシュ用のメモリが不十分だと探索の効率が落ちます。(コンピューターの棋力が弱くなります)
+読み筋の表示されるウインドウの右上に『HASH使用率』というのが表示されています。
+1手に使う思考時間が伸びていくと、この『HASH使用率が』増えていきますが、その時に
+この数字があまりに高いと、ハッシュメモリが足りていなくて読みの効率が落ちていることを意味します。</Description><DescriptionSimple i:nil="true" /><DisplayName>ハッシュメモリ管理</DisplayName><Hide>false</Hide><Name i:nil="true" /><UsiBuildString i:nil="true" /></EngineOptionDescription><EngineOptionDescription><ComboboxDisplayName i:nil="true" /><Description>このオプションを有効にすると、空き物理メモリから『Hash割合』の分だけ自動的にハッシュメモリを割当てます。
+このオプションを無効にすると、『Hash[MB]』の分だけ強制的にハッシュメモリを割り当てます。
+※　ハッシュメモリについての詳しい説明は『ハッシュメモリ管理』のところにマウスをホバーさせてください。</Description><DescriptionSimple>ハッシュメモリを自動的に割り当てます。</DescriptionSimple><DisplayName>自動ハッシュ</DisplayName><Hide>false</Hide><Name>AutoHash_</Name><UsiBuildString>option name AutoHash_ type check default true</UsiBuildString></EngineOptionDescription><EngineOptionDescription><ComboboxDisplayName i:nil="true" /><Description>上記の『自動ハッシュ割当』をオンにしている時に、空き物理メモリの何%をハッシュメモリに用いるかを設定します。
+『自動ハッシュ割当』がオフの時は、この値は無視されます。
+0%～100%までの数値で指定できます。小さな値を指定した場合、思考エンジンの最低必要ハッシュメモリに足りなくなるので
+その場合、後者の数値が優先されます。
+物理メモリが足りなくなる場合には、ここを少なめに設定してみてください。
+※　ハッシュメモリについての詳しい説明は『ハッシュメモリ管理』のところにマウスをホバーさせてください。</Description><DescriptionSimple>空き物理メモリの何%をハッシュメモリに用いるかを設定します。</DescriptionSimple><DisplayName>Hash割合</DisplayName><Hide>false</Hide><Name>AutoHashPercentage_</Name><UsiBuildString>option name AutoHashPercentage_ type spin default 70 min 0 max 100</UsiBuildString></EngineOptionDescription><EngineOptionDescription><ComboboxDisplayName i:nil="true" /><Description>上記の『自動ハッシュ割当』をオフにしている時に、何[MB]をハッシュメモリに用いるかを手動で設定します。
+『自動ハッシュ割当』がオンの時は、この値は無視されます。
+ここで指定した値が思考エンジンの最低必要ハッシュメモリに満たない場合、後者の値が優先されます。
+物理メモリが足りなくなる場合には、ここを少なめに設定してみてください。
+※　ハッシュメモリについての詳しい説明は『ハッシュメモリ管理』のところにマウスをホバーさせてください。</Description><DescriptionSimple>何MBをハッシュメモリに用いるかを設定します。</DescriptionSimple><DisplayName>Hash[MB]</DisplayName><Hide>false</Hide><Name>Hash_</Name><UsiBuildString>option name Hash_ type spin default 4096 min 0 max 1048576</UsiBuildString></EngineOptionDescription></EngineOptionDescriptions><EngineType>0</EngineType><EvalMemory>200</EvalMemory><MinimumHashMemory>128</MinimumHashMemory><Presets /><StackPerThread>40</StackPerThread><SupportedCpus><CpuType>AVX2</CpuType></SupportedCpus><SupportedExtendedProtocol /><WorkingMemory>150</WorkingMemory></EngineDefine>
