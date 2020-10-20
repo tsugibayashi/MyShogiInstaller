@@ -22,10 +22,11 @@ function print_usage() {
     echo "    下記ソフトウェアはオプション" 1>&2
     echo "    engine-YaneuraOu-nnue-kp256 : 外部思考エンジン(やねうら王NNUE(KP256)) のインストール" 1>&2
     echo "    eval-YaneuraOu-nnue-kp256   : 評価関数(やねうら王NNUE(KP256)) のインストール" 1>&2
-    echo "    ----------------------------------------------------------------" 1>&2
-    echo "    以降のソフトウェアは不要 (旧バージョンで使用していたもの)" 1>&2
+    echo "    Apery-wcsc30 : Apery WCSC30版 の思考エンジンと評価関数のインストール" 1>&2
     echo "    engine-tanuki-wcsc29 : 外部思考エンジン(tanuki- WCSC29版) のインストール (やねうら王NNUEを使用)" 1>&2
     echo "    eval-tanuki-wcsc29   : 評価関数(tanuki- WCSC29版) のインストール" 1>&2
+    echo "    ----------------------------------------------------------------" 1>&2
+    echo "    以降のソフトウェアは不要 (旧バージョンで使用していたもの)" 1>&2
     echo "    YaneuraOu_700t_book  : やねうら王 700テラショック定跡のインストール" 1>&2
     echo "    MyShogiImages-jnory  : 画像データ(jnory)のインストール" 1>&2
 }

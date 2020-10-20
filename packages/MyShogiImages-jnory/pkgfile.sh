@@ -9,9 +9,6 @@ URL=https://github.com/jnory/MyShogiImages.git
 COMMIT_HASH=2b53ec8653509c97e9717d1bf485b7e9027ce163
 PREREQUISITES=prerequisites.sh
 
-# 前提条件の確認
-. $PREREQUISITES
-
 # 変数(DESTDIR, WORKDIR, LOGDIR) の読み込み
 BASEDIR=$(cd `dirname $0`/../..; pwd)
 . ${BASEDIR}/configure.sh
@@ -20,6 +17,9 @@ BASEDIR=$(cd `dirname $0`/../..; pwd)
 
 # インストール先ディレクトリなどを作成
 create_dirs $DESTDIR $WORKDIR $LOGDIR
+
+# 前提条件の確認
+. $BASEDIR/packages/$NAME/$PREREQUISITES
 
 echo -n "画像データ(jnory)をインストールしています ... "
 

@@ -11,9 +11,6 @@ FILENAME_WITHOUT_EXT=`basename $FILENAME .zip`
 SHA256SUMS='b613e1b59801f5e8f43096cb2498d30360464932365ee4d34346b63c8698e0e0'
 PREREQUISITES=prerequisites.sh
 
-# 前提条件の確認
-. $PREREQUISITES
-
 # 変数(DESTDIR, WORKDIR, LOGDIR) の読み込み
 BASEDIR=$(cd `dirname $0`/../..; pwd)
 . ${BASEDIR}/configure.sh
@@ -22,6 +19,9 @@ BASEDIR=$(cd `dirname $0`/../..; pwd)
 
 # インストール先ディレクトリなどを作成
 create_dirs $DESTDIR $WORKDIR $LOGDIR
+
+# 前提条件の確認
+. $BASEDIR/packages/$NAME/$PREREQUISITES
 
 echo -n "真やねうら王 定跡をインストールしています ... "
 

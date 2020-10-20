@@ -21,9 +21,6 @@ PATCH8=ConsiderationEngineSettingDialog.Designer.patch
 OS=Linux
 PREREQUISITES=prerequisites.sh
 
-# 前提条件の確認
-. $PREREQUISITES
-
 # 変数(DESTDIR, WORKDIR, LOGDIR) の読み込み
 BASEDIR=$(cd `dirname $0`/../..; pwd)
 . ${BASEDIR}/configure.sh
@@ -35,6 +32,9 @@ create_dirs $DESTDIR $WORKDIR $LOGDIR
 
 # パッケージディレクトリに移動する
 cd $BASEDIR/packages/$NAME
+
+# 前提条件の確認
+. $PREREQUISITES
 
 # myshogi.sh を作業用ディレクトリにコピーする
 cp -p myshogi.sh ${WORKDIR}

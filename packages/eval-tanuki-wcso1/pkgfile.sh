@@ -14,9 +14,6 @@ FILENAME2=user_book1.db   #注意: YaneuraOu_700t_book でインストールさ�
 FILENAME3=user_book2.db   #注意: eval-tanuki-wcsc29 でインストールされるファイルと同名
 PREREQUISITES=prerequisites.sh
 
-# 前提条件の確認
-. $PREREQUISITES
-
 # 変数(DESTDIR, WORKDIR, LOGDIR) の読み込み
 BASEDIR=$(cd `dirname $0`/../..; pwd)
 . ${BASEDIR}/configure.sh
@@ -25,6 +22,9 @@ BASEDIR=$(cd `dirname $0`/../..; pwd)
 
 # インストール先ディレクトリなどを作成
 create_dirs $DESTDIR $WORKDIR $LOGDIR
+
+# 前提条件の確認
+. $BASEDIR/packages/$NAME/$PREREQUISITES
 
 echo -n "評価関数 (tanuki- WCSO1版) をインストールしています ... "
 

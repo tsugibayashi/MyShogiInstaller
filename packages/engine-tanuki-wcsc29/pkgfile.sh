@@ -17,9 +17,6 @@ ARCHLIST="avx2"
 EDITION=YANEURAOU_ENGINE_NNUE
 PREREQUISITES=prerequisites.sh
 
-# 前提条件の確認
-. $PREREQUISITES
-
 # 変数(DESTDIR, WORKDIR, LOGDIR) の読み込み
 BASEDIR=$(cd `dirname $0`/../..; pwd)
 . ${BASEDIR}/configure.sh
@@ -31,6 +28,9 @@ create_dirs $DESTDIR $WORKDIR $LOGDIR
 
 # パッケージディレクトリに移動する
 cd $BASEDIR/packages/$NAME
+
+# 前提条件の確認
+. $PREREQUISITES
 
 # engine_define.xml を作業用ディレクトリにコピーする
 cp -p engine_define.xml ${WORKDIR}

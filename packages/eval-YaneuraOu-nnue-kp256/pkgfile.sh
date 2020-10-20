@@ -11,9 +11,6 @@ FILENAME=`echo $URL | sed -e 's/\// /g' | gawk '{print($NF)}'`
 SHA256SUMS='e8d7359a8648acfadfba6ef87ff129e4466091643e6094a1b1a82c91e640eebb'
 PREREQUISITES=prerequisites.sh
 
-# 前提条件の確認
-. $PREREQUISITES
-
 # 変数(DESTDIR, WORKDIR, LOGDIR) の読み込み
 BASEDIR=$(cd `dirname $0`/../..; pwd)
 . ${BASEDIR}/configure.sh
@@ -22,6 +19,9 @@ BASEDIR=$(cd `dirname $0`/../..; pwd)
 
 # インストール先ディレクトリなどを作成
 create_dirs $DESTDIR $WORKDIR $LOGDIR
+
+# 前提条件の確認
+. $BASEDIR/packages/$NAME/$PREREQUISITES
 
 echo -n "評価関数 (やねうら王 NNUE(KP256)) をインストールしています ... "
 
