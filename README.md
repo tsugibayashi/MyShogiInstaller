@@ -109,7 +109,7 @@ GPL v3
 以下ソフトウェアおよびデータがインストールされます。
 
 * MyShogi (https://github.com/yaneurao/MyShogi)
-* やねうら王 NNUE版 思考エンジン (https://github.com/yaneurao/YaneuraOu)
+* やねうら王 NNUE型 思考エンジン (https://github.com/yaneurao/YaneuraOu)
 * やねうら王 定跡ファイル (https://github.com/yaneurao/YaneuraOu)
 * tanuki- 詰将棋エンジン (https://github.com/yaneurao/YaneuraOu)
 * tanuki- WCSO1版 評価関数 (https://github.com/nodchip/tanuki-)
@@ -119,8 +119,10 @@ GPL v3
 
 また、オプションとして以下ソフトウェアもインストールできます。
 
+* やねうら王 NNUE型(KP256) 思考エンジン (https://github.com/yaneurao/YaneuraOu)
 * 魚沼産やねうら王 (https://github.com/yaneurao/YaneuraOu/releases/tag/20190212_k-p-256-32-32)
 * Apery WCSC30版 (https://github.com/HiraokaTakuya/apery_rust)
+* tanuki- WCSC29版 (https://github.com/nodchip/tanuki-)
 
 ### 商用ライセンスを持っているのですが、それらの画像を使用できますか？
 
