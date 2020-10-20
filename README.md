@@ -46,8 +46,8 @@ g++-9は[レポジトリ](ppa:ubuntu-toolchain-r/test)を使用してインス�
 
 (2) 取得したファイルを展開し、作成されたディレクトリに移動します。
 
-    $ unzip V1.4.zip
-    $ cd MyShogiInstaller-1.4/
+    $ unzip V1.5.zip
+    $ cd MyShogiInstaller-1.5/
 
 (3) ./configure.sh を開き、下記変数を修正します。
 
