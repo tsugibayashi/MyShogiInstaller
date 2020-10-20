@@ -120,6 +120,7 @@ GPL v3
 また、オプションとして以下ソフトウェアもインストールできます。
 
 * 魚沼産やねうら王 (https://github.com/yaneurao/YaneuraOu/releases/tag/20190212_k-p-256-32-32)
+* Apery WCSC30版 (https://github.com/HiraokaTakuya/apery_rust)
 
 ### 商用ライセンスを持っているのですが、それらの画像を使用できますか？
 
