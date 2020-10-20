@@ -7,6 +7,10 @@ set -e
 NAME=MyShogiImages-ts
 URL=https://github.com/tsugibayashi/MyShogiImages.git
 #COMMIT_HASH=2b53ec8653509c97e9717d1bf485b7e9027ce163
+PREREQUISITES=prerequisites.sh
+
+# 前提条件の確認
+. $PREREQUISITES
 
 # 変数(DESTDIR, WORKDIR, LOGDIR) の読み込み
 BASEDIR=$(cd `dirname $0`/../..; pwd)

@@ -10,6 +10,10 @@ COMMIT_HASH=2d3c08ef33a9f951aaef366aaa3cc7d5094aa8d7
 OS=Linux
 MAKE_TARGET=linux
 EXT=so
+PREREQUISITES=prerequisites.sh
+
+# 前提条件の確認
+. $PREREQUISITES
 
 # 変数(DESTDIR, WORKDIR, LOGDIR) の読み込み
 BASEDIR=$(cd `dirname $0`/../..; pwd)

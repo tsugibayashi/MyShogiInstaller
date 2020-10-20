@@ -7,6 +7,10 @@ set -e
 NAME=MyShogiSound
 URL=https://github.com/matarillo/MyShogiSound.git
 COMMIT_HASH=3b192b0c6797e217ae3472196570071c19a25550
+PREREQUISITES=prerequisites.sh
+
+# 前提条件の確認
+. $PREREQUISITES
 
 # 変数(DESTDIR, WORKDIR, LOGDIR) の読み込み
 BASEDIR=$(cd `dirname $0`/../..; pwd)

@@ -17,6 +17,10 @@ BASEDIR=$(cd `dirname $0`/../..; pwd)
 . ${BASEDIR}/configure.sh
 # 関数の読み込み
 . ${BASEDIR}/tool.sh
+PREREQUISITES=prerequisites.sh
+
+# 前提条件の確認
+. $PREREQUISITES
 
 # インストール先ディレクトリなどを作成
 create_dirs $DESTDIR $WORKDIR $LOGDIR

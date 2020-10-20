@@ -10,6 +10,10 @@ FILENAME1=`echo $URL | sed -e 's/\// /g' | gawk '{print($NF)}'`
 FILENAME1_WITHOUT_EXT=`basename $FILENAME1 .zip`
 SHA256SUMS='9c3a72777326ce6172d02dcd9fcba0d69be629f758f5da3b6f275cee5c826996'
 FILENAME2=yaneura_book1.db
+PREREQUISITES=prerequisites.sh
+
+# 前提条件の確認
+. $PREREQUISITES
 
 # 変数(DESTDIR, WORKDIR, LOGDIR) の読み込み
 BASEDIR=$(cd `dirname $0`/../..; pwd)

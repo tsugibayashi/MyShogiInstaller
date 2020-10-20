@@ -9,6 +9,10 @@ DIRNAME=YaneuraOu-nnue-kp256
 URL="https://github.com/yaneurao/YaneuraOu/releases/download/20190212_k-p-256-32-32/20190212_k-p-256-32-32.zip"
 FILENAME=`echo $URL | sed -e 's/\// /g' | gawk '{print($NF)}'`
 SHA256SUMS='e8d7359a8648acfadfba6ef87ff129e4466091643e6094a1b1a82c91e640eebb'
+PREREQUISITES=prerequisites.sh
+
+# 前提条件の確認
+. $PREREQUISITES
 
 # 変数(DESTDIR, WORKDIR, LOGDIR) の読み込み
 BASEDIR=$(cd `dirname $0`/../..; pwd)

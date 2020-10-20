@@ -15,6 +15,10 @@ ARCHLIST="avx2"
 #ARCHLIST="avx2,sse42"
 #ARCHLIST="avx2,sse42,sse41,sse2"
 EDITION=YANEURAOU_ENGINE_NNUE_KP256
+PREREQUISITES=prerequisites.sh
+
+# 前提条件の確認
+. $PREREQUISITES
 
 # 変数(DESTDIR, WORKDIR, LOGDIR) の読み込み
 BASEDIR=$(cd `dirname $0`/../..; pwd)

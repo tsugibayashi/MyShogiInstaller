@@ -17,7 +17,12 @@ PATCH4=OperationSettingDialog.Designer.cs.patch
 PATCH5=GameSettingDialog.Designer.cs.patch
 PATCH6=TimeSettingControl.Designer.cs.patch
 PATCH7=howto-use-external-engine.patch
+PATCH8=ConsiderationEngineSettingDialog.Designer.patch
 OS=Linux
+PREREQUISITES=prerequisites.sh
+
+# 前提条件の確認
+. $PREREQUISITES
 
 # 変数(DESTDIR, WORKDIR, LOGDIR) の読み込み
 BASEDIR=$(cd `dirname $0`/../..; pwd)
@@ -42,6 +47,7 @@ cp -p $PATCH4 ${WORKDIR}
 cp -p $PATCH5 ${WORKDIR}
 cp -p $PATCH6 ${WORKDIR}
 cp -p $PATCH7 ${WORKDIR}
+cp -p $PATCH8 ${WORKDIR}
 
 echo -n "MyShogiをインストールしています ... "
 
@@ -70,6 +76,8 @@ if [ ! -d $NAME ]; then
     # howto-use-external-engine.html: 文章を修正
     # howto-use-external-engine.md: 文章を修正
     patch -p1 < ${WORKDIR}/$PATCH7 2>&1 >> ${LOGDIR}/${NAME}.install.log
+    # 対局->検討エンジン設定 の文字の位置を修正
+    patch -p1 < ${WORKDIR}/$PATCH8 2>&1 >> ${LOGDIR}/${NAME}.install.log
 
     msbuild ./${NAME}.sln /p:Configuration=${OS} 2>&1 >> ${LOGDIR}/${NAME}.install.log
     # MyShogi.exe をインストールする

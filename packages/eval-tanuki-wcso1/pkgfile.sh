@@ -12,6 +12,10 @@ DIRNAME1=`basename $FILENAME1 .7z`
 SHA256SUMS='d203dcc0b5d165e0171ce52a2b394a61a23eea32cebaabac63f40b6aa7581dea'
 FILENAME2=user_book1.db   #注意: YaneuraOu_700t_book でインストールされるファイルと同名
 FILENAME3=user_book2.db   #注意: eval-tanuki-wcsc29 でインストールされるファイルと同名
+PREREQUISITES=prerequisites.sh
+
+# 前提条件の確認
+. $PREREQUISITES
 
 # 変数(DESTDIR, WORKDIR, LOGDIR) の読み込み
 BASEDIR=$(cd `dirname $0`/../..; pwd)
