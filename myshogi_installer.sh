@@ -28,6 +28,9 @@ function print_usage() {
     echo "      eval-Sylwi-wcso1    : 評価関数(Sylwi WCSO1版) のインストール" 1>&2
     echo "    [Apery WCSC30版]" 1>&2
     echo "      Apery-wcsc30 : Apery WCSC30版 の思考エンジンと評価関数のインストール" 1>&2
+    echo "    [shinderella Version:Cute]" 1>&2
+    echo "      engine-shinderella-Cute : 外部思考エンジン(shinderella Version:Cute) のインストール (やねうら王NNUEを使用)" 1>&2
+    echo "      eval-shinderella-Cute   : 評価関数(shinderella Version:Cute) のインストール" 1>&2
     echo "    [tanuki- WCSC29版]" 1>&2
     echo "      engine-tanuki-wcsc29 : 外部思考エンジン(tanuki- WCSC29版) のインストール (やねうら王NNUEを使用)" 1>&2
     echo "      eval-tanuki-wcsc29   : 評価関数(tanuki- WCSC29版) のインストール" 1>&2

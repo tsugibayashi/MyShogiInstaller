@@ -123,6 +123,7 @@ GPL v3
 * Qhapaq WCSO1版 (https://github.com/qhapaq-49/qhapaq-bin)
 * Sylwi WCSO1版 (https://github.com/mizar/YaneuraOu)
 * Apery WCSC30版 (https://github.com/HiraokaTakuya/apery_rust)
+* shinderella Version:Cute (https://www.qhapaq.org/shogi/kifdb/)
 * やねうら王 NNUE型(KP256) 思考エンジン (https://github.com/yaneurao/YaneuraOu)
 * Kristallweizen改 V0.4 (https://github.com/Tama4649/Kristallweizen/)
 * 魚沼産やねうら王 (https://github.com/yaneurao/YaneuraOu/releases/tag/20190212_k-p-256-32-32)
