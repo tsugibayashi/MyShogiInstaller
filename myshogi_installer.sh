@@ -23,6 +23,9 @@ function print_usage() {
     echo "    [Qhapaq WCSO1版]" 1>&2
     echo "      engine-Qhapaq-wcso1 : 外部思考エンジン(Qhapaq WCSO1版) のインストール (やねうら王NNUE-HalfKPE9を使用)" 1>&2
     echo "      eval-Qhapaq-wcso1   : 評価関数(Qhapaq WCSO1版) のインストール" 1>&2
+    echo "    [Sylwi WCSO1版]" 1>&2
+    echo "      engine-Sylwi-wcso1  : 外部思考エンジン(Sylwi WCSO1版) のインストール (やねうら王NNUE-HalfKPE9を使用)" 1>&2
+    echo "      eval-Sylwi-wcso1    : 評価関数(Sylwi WCSO1版) のインストール" 1>&2
     echo "    [Apery WCSC30版]" 1>&2
     echo "      Apery-wcsc30 : Apery WCSC30版 の思考エンジンと評価関数のインストール" 1>&2
     echo "    [tanuki- WCSC29版]" 1>&2

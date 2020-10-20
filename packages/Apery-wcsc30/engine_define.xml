@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?><EngineDefine xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.datacontract.org/2004/07/MyShogi.Model.Shogi.EngineDefine"><BannerFileName>banner.png</BannerFileName><Description>第30回世界コンピュータ将棋選手権(WCSC30)に出場予定だったバージョンのAperyです。
-Rustで書かれています。</Description><DescriptionSimple>Apery WCSC30版</DescriptionSimple><DisplayName>Apery WCSC30版</DisplayName><DisplayOrder>8000</DisplayOrder><EngineExeName>Apery-wcsc30</EngineExeName><EngineOptionDescriptions><EngineOptionDescription><ComboboxDisplayName i:nil="true" /><Description>コンピューターが思考する時にハッシュメモリというものを使います。
+Rustで書かれています。</Description><DescriptionSimple>Apery WCSC30版</DescriptionSimple><DisplayName>Apery WCSC30版</DisplayName><DisplayOrder>7700</DisplayOrder><EngineExeName>Apery-wcsc30</EngineExeName><EngineOptionDescriptions><EngineOptionDescription><ComboboxDisplayName i:nil="true" /><Description>コンピューターが思考する時にハッシュメモリというものを使います。
 これは、一度調べた局面の情報を保存しておくために必要です。
 ハッシュ用のメモリが不十分だと探索の効率が落ちます。(コンピューターの棋力が弱くなります)
 読み筋の表示されるウインドウの右上に『HASH使用率』というのが表示されています。

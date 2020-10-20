@@ -4,8 +4,8 @@
 set -e
 
 # variables
-NAME=engine-Qhapaq-wcso1
-DIRNAME=Qhapaq-wcso1-nnue-halfkpe9
+NAME=engine-Sylwi-wcso1
+DIRNAME=Sylwi-wcso1-nnue-halfkpe9
 URL=https://github.com/tttak/YaneuraOu.git
 COMMIT_HASH=d7a58b44e982f9608f9f0324d79f9ed101d17218     #Mar 26, 2020 (V4.89)
 ARCHLIST="avx2"
@@ -47,10 +47,6 @@ if [ ! -d $NAME ]; then
 
     cd $NAME
     (git checkout ${COMMIT_HASH} 2>&1) >> ${LOGDIR}/${NAME}.install.log
-
-    # やねうら王のスレッド起動に pthread を使うようにする野良パッチ
-    # https://note.com/jnory/n/n76c31464e26b
-    #patch -p1 < ${PATCH}
 
     echo -n "${EDITION}( "
 
