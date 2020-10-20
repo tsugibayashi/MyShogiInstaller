@@ -119,14 +119,15 @@ GPL v3
 
 また、オプションとして以下ソフトウェアもインストールできます。
 
-* やねうら王 NNUE型(KP256) 思考エンジン (https://github.com/yaneurao/YaneuraOu)
-* 魚沼産やねうら王 (https://github.com/yaneurao/YaneuraOu/releases/tag/20190212_k-p-256-32-32)
-* Apery WCSC30版 (https://github.com/HiraokaTakuya/apery_rust)
-* tanuki- WCSC29版 (https://github.com/nodchip/tanuki-)
-* Kristallweizen改 V0.4 (https://github.com/Tama4649/Kristallweizen/)
 * やねうら王 NNUE-HalfKPE9型 思考エンジン (https://github.com/tttak/YaneuraOu/)
 * Qhapaq WCSO1版 (https://github.com/qhapaq-49/qhapaq-bin)
 * Sylwi WCSO1版 (https://github.com/mizar/YaneuraOu)
+* Apery WCSC30版 (https://github.com/HiraokaTakuya/apery_rust)
+* やねうら王 NNUE型(KP256) 思考エンジン (https://github.com/yaneurao/YaneuraOu)
+* Kristallweizen改 V0.4 (https://github.com/Tama4649/Kristallweizen/)
+* 魚沼産やねうら王 (https://github.com/yaneurao/YaneuraOu/releases/tag/20190212_k-p-256-32-32)
+* やねうら王 MATERIAL型 思考エンジン (https://github.com/yaneurao/YaneuraOu)
+* tanuki- WCSC29版 (https://github.com/nodchip/tanuki-)
 
 ### 商用ライセンスを持っているのですが、それらの画像を使用できますか？
 
