@@ -42,7 +42,11 @@ monodevelopは[公式サイト](https://www.mono-project.com/download)
     $ unzip V1.6.zip
     $ cd MyShogiInstaller-1.6/
 
-(3) ./configure.sh を開き、下記変数を修正します。
+(3) 使用するPC上のCPUがサポートする拡張機能を確認します。
+
+    $ grep flags /proc/cpuinfo | head -1 | grep -E '(avx512|avx2|sse4_2|sse4_1|sse2)'
+
+(4) ./configure.sh を開き、下記変数を修正します。
 
 | 変数 | 説明 | デフォルト値 |
 ----|----|----
@@ -51,10 +55,6 @@ monodevelopは[公式サイト](https://www.mono-project.com/download)
 | LOGDIR | インストールログの出力先 | $HOME/MyShogi/log |
 | ARCHLIST | ビルドするCPU拡張機能の種類 | avx2 |
 | COMPILER | やねうら王のビルドに使用するコンパイラ | g++9 |
-
-(4) 使用するPC上のCPUがサポートする拡張機能を確認します。
-
-    $ grep flags /proc/cpuinfo | head -1 | grep -E '(avx2|sse4_2|sse4_1|sse2)'
 
 (5) 以下のコマンドを実行し、MyShogi、および、その関連ファイルをインストールします。
 
