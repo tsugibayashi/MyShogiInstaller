@@ -1,0 +1,28 @@
+--- MyShogi.org/MyShogi/View/Win2D/Game/MainDialog/MainDialogMenuItem.cs	2020-10-21 11:08:46.271572507 +0900
++++ MyShogi/MyShogi/View/Win2D/Game/MainDialog/MainDialogMenuItem.cs	2020-10-21 11:07:19.555911915 +0900
+@@ -141,14 +141,14 @@
+ 
+                                     // [ファイルの種類]に表示される選択肢を指定する
+                                     // 指定しないとすべてのファイルが表示される
+-                                    fd.Filter = "KIF形式(*.KIF)|*.KIF|KIF2形式(*.KI2)|*.KI2|CSA形式(*.CSA)|*.CSA"
++                                    fd.Filter = "KIF形式(*.kif)|*.kif|KIF2形式(*.KI2)|*.KI2|CSA形式(*.CSA)|*.CSA"
+                                         + "|PSN形式(*.PSN)|*.PSN|PSN2形式(*.PSN2)|*.PSN2"
+                                         + "|SFEN形式(*.SFEN)|*.SFEN|すべてのファイル(*.*)|*.*";
+                                 fd.FilterIndex = 1;
+                                 fd.Title = "棋譜を保存するファイル形式を選択してください";
+                                     // デフォルトでは、先手名 + 後手名 + YYYYMMDDhhmmss.kif
+                                     // 柿木やkifu for Windowsがこの形式らしい。
+-                                    var default_filename = $"{gameServer.DefaultKifuFileName()}.KIF";
++                                    var default_filename = $"{gameServer.DefaultKifuFileName()}.kif";
+                                 fd.FileName = default_filename;
+                                     // これでescapeされているし、ダイアログが使えないファイル名は返さないから、以降のescapeは不要。
+ 
+@@ -200,7 +200,7 @@
+ 
+                                     // [ファイルの種類]に表示される選択肢を指定する
+                                     // 指定しないとすべてのファイルが表示される
+-                                    fd.Filter = "KIF形式(*.KIF)|*.KIF|KIF2形式(*.KI2)|*.KI2|CSA形式(*.CSA)|*.CSA"
++                                    fd.Filter = "KIF形式(*.kif)|*.kif|KIF2形式(*.KI2)|*.KI2|CSA形式(*.CSA)|*.CSA"
+                                         + "|PSN形式(*.PSN)|*.PSN|PSN2形式(*.PSN2)|*.PSN2"
+                                         + "|SFEN形式(*.SFEN)|*.SFEN|SVG形式(*.SVG)|*.SVG|すべてのファイル(*.*)|*.*";
+                                 fd.FilterIndex = 1;
