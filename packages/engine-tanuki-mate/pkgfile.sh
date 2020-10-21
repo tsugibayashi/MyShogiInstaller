@@ -11,9 +11,6 @@ COMMIT_HASH=e69d268ca7cb65b376d83fc800cea4a04c9e1730     #Jun  1, 2020 (V4.91)
 #COMMIT_HASH=42de5c6cbbfb6bca55a4d7e3d91a8620a4596466    #May 28, 2020 (V4.90)
 #COMMIT_HASH=e99d2fc7c05489935badeb066de514a1ae2bcb1e    #Feb 28, 2020 (V4.89)
 #COMMIT_HASH=8a56754f48776bb487942f8e283de334bd4e9888    #Jun 25, 2019 (V4.88)
-ARCHLIST="avx2"
-#ARCHLIST="avx2,sse42"
-#ARCHLIST="avx2,sse42,sse41,sse2"
 EDITION=MATE_ENGINE
 PREREQUISITES=prerequisites.sh
 
@@ -30,7 +27,7 @@ create_dirs $DESTDIR $WORKDIR $LOGDIR
 cd $BASEDIR/packages/$NAME
 
 # 前提条件の確認
-. $PREREQUISITES
+. $PREREQUISITES $COMPILER
 
 # engine_define.xml を作業用ディレクトリにコピーする
 cp -p engine_define.xml ${WORKDIR}
@@ -61,7 +58,7 @@ if [ ! -d $NAME ]; then
         echo -n "${ARCH} " 1>&2
 
         (make clean YANEURAOU_EDITION=$EDITION 2>&1) >> ${LOGDIR}/${NAME}.install.log
-        (make -j1 normal TARGET_CPU=`echo $ARCH | tr '[a-z]' '[A-Z]'` COMPILER=g++ YANEURAOU_EDITION=${EDITION} 2>&1) >> ${LOGDIR}/${NAME}.install.log
+        (make -j1 normal TARGET_CPU=`echo $ARCH | tr '[a-z]' '[A-Z]'` COMPILER=${COMPILER} YANEURAOU_EDITION=${EDITION} 2>&1) >> ${LOGDIR}/${NAME}.install.log
 
         mkdir -pv ${DESTDIR}/engine/${DIRNAME} 2>&1 >> ${LOGDIR}/${NAME}.install.log
         install -m 755 YaneuraOu-by-gcc ${DESTDIR}/engine/${DIRNAME}/${DIRNAME}_${ARCH}.exe 2>&1 >> ${LOGDIR}/${NAME}.install.log

@@ -20,9 +20,7 @@ MyShogiのビルドを行う前に、以下のパッケージをインストー�
 * make
 * git
 * build-essential
-* g++-9
-* libomp-8-dev
-* libopenblas-dev
+* コンパイラ (g++, g++-9, clang++ など)
 * curl
 * unzip
 * unar (7zファイルの展開に使用します)
@@ -32,11 +30,6 @@ MyShogiのビルドを行う前に、以下のパッケージをインストー�
 
 monodevelopは[公式サイト](https://www.mono-project.com/download)
 に書かれた手順を参考にしてインストールして下さい。
-
-g++-9は[レポジトリ](ppa:ubuntu-toolchain-r/test)を使用してインストールします。
-
-    $ sudo add-apt-repository ppa:ubuntu-toolchain-r/test
-    $ sudo apt install build-essential g++-9 libomp-8-dev libopenblas-dev
 
 ## ビルド手順
 
@@ -56,18 +49,14 @@ g++-9は[レポジトリ](ppa:ubuntu-toolchain-r/test)を使用してインス�
 | DESTDIR | インストール先ディレクトリ | $HOME/MyShogi |
 | WORKDIR | 作業用ディレクトリ | $HOME/MyShogi/work |
 | LOGDIR | インストールログの出力先 | $HOME/MyShogi/log |
+| ARCHLIST | ビルドするCPU拡張機能の種類 | avx2 |
+| COMPILER | やねうら王のビルドに使用するコンパイラ | g++9 |
 
 (4) 使用するPC上のCPUがサポートする拡張機能を確認します。
 
     $ grep flags /proc/cpuinfo | head -1 | grep -E '(avx2|sse4_2|sse4_1|sse2)'
 
-(5) ./packages/engine-tanuki-mate/pkgfile.sh および ./packages/engine-tanuki-wcso1/pkgfile.sh を開き、下記変数を修正します。
-
-| 変数 | 説明 | デフォルト値 |
-----|----|----
-| ARCHLIST | ビルドするCPU拡張機能の種類 | avx2 |
-
-(6) 以下のコマンドを実行し、MyShogi、および、その関連ファイルをインストールします。
+(5) 以下のコマンドを実行し、MyShogi、および、その関連ファイルをインストールします。
 
     $ ./myshogi_installer.sh all
 

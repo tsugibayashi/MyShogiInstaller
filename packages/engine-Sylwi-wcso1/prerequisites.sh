@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# 変数の読み込み
+COMPILER=$1
+
 # cmake
 if ! (cmake --version >& /dev/null); then
     echo "NG" 1>&2
@@ -14,21 +17,26 @@ if ! (make --version >& /dev/null); then
     exit 1
 fi
 
-# wget
-if ! (wget --version >& /dev/null); then
+# git
+if ! (git --version >& /dev/null); then
     echo "NG" 1>&2
     exit 1
 fi
 
-# unzip
-if ! (unzip -v >& /dev/null); then
+# compiler
+if ! ($COMPILER --version >& /dev/null); then
     echo "NG" 1>&2
-    exit 1
-fi
-
-# g++
-if ! (g++ --version >& /dev/null); then
-    echo "NG" 1>&2
+    case $COMPILER in
+        g++-9)
+            echo "下記コマンドを実行して、g++-9 をインストールしてください:"
+            echo "    $ sudo add-apt-repository ppa:ubuntu-toolchain-r/test"
+            echo "    $ sudo apt install build-essential g++-9 libomp-8-dev libopenblas-dev"
+        ;;
+        clang++)
+            echo "下記コマンドを実行して、clang をインストールしてください:"
+            echo "    $ sudo apt install clang"
+        ;;
+    esac
     exit 1
 fi
 

@@ -8,9 +8,6 @@ NAME=engine-Qhapaq-wcso1
 DIRNAME=Qhapaq-wcso1-nnue-halfkpe9
 URL=https://github.com/tttak/YaneuraOu.git
 COMMIT_HASH=d7a58b44e982f9608f9f0324d79f9ed101d17218     #Mar 26, 2020 (V4.89)
-ARCHLIST="avx2"
-#ARCHLIST="avx2,sse42"
-#ARCHLIST="avx2,sse42,sse41,sse2"
 EDITION=YANEURAOU_ENGINE_NNUE
 PREREQUISITES=prerequisites.sh
 
@@ -27,7 +24,7 @@ create_dirs $DESTDIR $WORKDIR $LOGDIR
 cd $BASEDIR/packages/$NAME
 
 # 前提条件の確認
-. $PREREQUISITES
+. $PREREQUISITES $COMPILER
 
 # engine_define.xml を作業用ディレクトリにコピーする
 cp -p engine_define.xml ${WORKDIR}
@@ -60,7 +57,7 @@ if [ ! -d $NAME ]; then
         echo -n "${ARCH} " 1>&2
 
         (make clean YANEURAOU_EDITION=$EDITION 2>&1) >> ${LOGDIR}/${NAME}.install.log
-        (make -j1 normal TARGET_CPU=`echo $ARCH | tr '[a-z]' '[A-Z]'` COMPILER=g++ YANEURAOU_EDITION=${EDITION} 2>&1) >> ${LOGDIR}/${NAME}.install.log
+        (make -j1 normal TARGET_CPU=`echo $ARCH | tr '[a-z]' '[A-Z]'` COMPILER=${COMPILER} YANEURAOU_EDITION=${EDITION} 2>&1) >> ${LOGDIR}/${NAME}.install.log
 
         mkdir -pv ${DESTDIR}/engine/${DIRNAME} 2>&1 >> ${LOGDIR}/${NAME}.install.log
         install -m 755 YaneuraOu-by-gcc ${DESTDIR}/engine/${DIRNAME}/${DIRNAME}_${ARCH}.exe 2>&1 >> ${LOGDIR}/${NAME}.install.log
