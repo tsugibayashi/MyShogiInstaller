@@ -39,8 +39,8 @@ monodevelopは[公式サイト](https://www.mono-project.com/download)
 
 (2) 取得したファイルを展開し、作成されたディレクトリに移動します。
 
-    $ unzip V1.5.zip
-    $ cd MyShogiInstaller-1.5/
+    $ unzip V1.6.zip
+    $ cd MyShogiInstaller-1.6/
 
 (3) ./configure.sh を開き、下記変数を修正します。
 
