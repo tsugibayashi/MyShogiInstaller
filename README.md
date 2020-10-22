@@ -108,6 +108,7 @@ GPL v3
 
 また、オプションとして以下ソフトウェアもインストールできます。
 
+* 水匠2 WCSO1版 (https://drive.google.com/drive/folders/19Al69YMkJ_cXSBhtn8df9yfxhn8QFCYo)
 * やねうら王 NNUE-HalfKPE9型 思考エンジン (https://github.com/tttak/YaneuraOu/)
 * Qhapaq WCSO1版 (https://github.com/qhapaq-49/qhapaq-bin)
 * Sylwi WCSO1版 (https://github.com/mizar/YaneuraOu)
@@ -117,6 +118,7 @@ GPL v3
 * shinderella Version:Cool (https://www.qhapaq.org/shogi/kifdb/)
 * やねうら王 NNUE型(KP256) 思考エンジン (https://github.com/yaneurao/YaneuraOu)
 * Kristallweizen改 V0.4 (https://github.com/Tama4649/Kristallweizen/)
+* 水匠U(二枚落ち特化) (https://drive.google.com/drive/folders/19Al69YMkJ_cXSBhtn8df9yfxhn8QFCYo)
 * 魚沼産やねうら王 (https://github.com/yaneurao/YaneuraOu/releases/tag/20190212_k-p-256-32-32)
 * やねうら王 MATERIAL型 思考エンジン (https://github.com/yaneurao/YaneuraOu)
 * tanuki- WCSC29版 (https://github.com/nodchip/tanuki-)

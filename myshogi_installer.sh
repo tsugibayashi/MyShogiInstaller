@@ -20,6 +20,9 @@ function print_usage() {
     echo "    MyShogiSound         : 音声データのインストール" 1>&2
     echo "    ----------------------------------------------------------------" 1>&2
     echo "    下記ソフトウェアはオプション" 1>&2
+    echo "    [水匠2 WCSO1版]" 1>&2
+    echo "      engine-Suisho2-wcso1 : 外部思考エンジン(水匠2 WCSO1版) のインストール (やねうら王NNUEを使用)" 1>&2
+    echo "      eval-Suisho2-wcso1   : 評価関数(水匠2 WCSO1版) のインストール" 1>&2
     echo "    [Qhapaq WCSO1版]" 1>&2
     echo "      engine-Qhapaq-wcso1 : 外部思考エンジン(Qhapaq WCSO1版) のインストール (やねうら王NNUE-HalfKPE9を使用)" 1>&2
     echo "      eval-Qhapaq-wcso1   : 評価関数(Qhapaq WCSO1版) のインストール" 1>&2
@@ -43,6 +46,9 @@ function print_usage() {
     echo "    [Kristallweizen改 V0.4]" 1>&2
     echo "      engine-Kristallweizen-kaiV0.4 : 外部思考エンジン(Kristallweizen改V0.4) のインストール (やねうら王NNUEを使用)" 1>&2
     echo "      eval-Kristallweizen-kaiV0.4   : 評価関数(Kristallweizen改V0.4) のインストール" 1>&2
+    echo "    [水匠U(二枚落ち特化)]" 1>&2
+    echo "      engine-SuishoU : 外部思考エンジン(水匠U) のインストール (やねうら王NNUEを使用)" 1>&2
+    echo "      eval-SuishoU   : 評価関数(水匠U) のインストール" 1>&2
     echo "    [やねうら王NNUE(KP256)]" 1>&2
     echo "      engine-YaneuraOu-nnue-kp256 : 外部思考エンジン(やねうら王NNUE(KP256)) のインストール" 1>&2
     echo "      eval-YaneuraOu-nnue-kp256   : 評価関数(やねうら王NNUE(KP256)) のインストール" 1>&2
