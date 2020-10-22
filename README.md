@@ -111,6 +111,7 @@ GPL v3
 * 水匠2 WCSO1版 (https://drive.google.com/drive/folders/19Al69YMkJ_cXSBhtn8df9yfxhn8QFCYo)
 * やねうら王 NNUE-HalfKPE9型 思考エンジン (https://github.com/tttak/YaneuraOu/)
 * Qhapaq WCSO1版 (https://github.com/qhapaq-49/qhapaq-bin)
+* 名人コブラ WCSO1版 (https://drive.google.com/file/d/11AlHhwujgSxEoc1yk8wyTFJXQrh9LZ9q/view)
 * Sylwi WCSO1版 (https://github.com/mizar/YaneuraOu)
 * Apery WCSC30版 (https://github.com/HiraokaTakuya/apery_rust)
 * orqha1018 (https://www.qhapaq.org/shogi/kifdb/)
