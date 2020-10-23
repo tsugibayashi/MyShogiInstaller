@@ -1,6 +1,6 @@
 --- MyShogi.org/MyShogi/View/Win2D/Game/GameScreenControl/GameScreenControlConst.cs	2020-10-21 11:08:46.267572523 +0900
-+++ MyShogi/MyShogi/View/Win2D/Game/GameScreenControl/GameScreenControlConst.cs	2020-10-23 11:13:24.104756956 +0900
-@@ -66,17 +66,18 @@
++++ MyShogi/MyShogi/View/Win2D/Game/GameScreenControl/GameScreenControlConst.cs	2020-10-23 15:44:36.085562452 +0900
+@@ -66,24 +66,25 @@
          {
              // 普通の駒台の場合
              {
@@ -23,7 +23,21 @@
              },
              // 縦長の駒台の場合
              {
+-                new Point(/*Piece.PAWN  ,*/ -5,549),
+-                new Point(/*Piece.LANCE ,*/ -5,459),
+-                new Point(/*Piece.KNIGHT,*/ -5,369),
+-                new Point(/*Piece.SILVER,*/ -5,279),
+-                new Point(/*Piece.BISHOP,*/ -5, 95),
+-                new Point(/*Piece.ROOK  ,*/ -5,  0),
+-                new Point(/*Piece.GOLD  ,*/ -5,187),
 +                // (横,縦)=(95,633)
-                 new Point(/*Piece.PAWN  ,*/ -5,549),
-                 new Point(/*Piece.LANCE ,*/ -5,459),
-                 new Point(/*Piece.KNIGHT,*/ -5,369),
++                new Point(/*Piece.PAWN  ,*/ -5,555),
++                new Point(/*Piece.LANCE ,*/ -5,460),
++                new Point(/*Piece.KNIGHT,*/ -5,365),
++                new Point(/*Piece.SILVER,*/ -5,266),
++                new Point(/*Piece.BISHOP,*/ -5, 64),
++                new Point(/*Piece.ROOK  ,*/ -5,-37),
++                new Point(/*Piece.GOLD  ,*/ -5,166),
+             }
+         };
+ 
