@@ -1,0 +1,24 @@
+--- MyShogi.org/MyShogi/View/Win2D/Game/GameScreenControl/GameScreenControlEventHelper.cs	2020-10-21 11:08:46.267572523 +0900
++++ MyShogi/MyShogi/View/Win2D/Game/GameScreenControl/GameScreenControlEventHelper.cs	2020-10-23 19:05:55.001785666 +0900
+@@ -462,8 +462,9 @@
+                     int file = pc % 3;
+                     int rank = pc / 3;
+ 
+-                    int x = (int)(file * piece_img_size.Width * .8);
+-                    int y = (int)(rank * piece_img_size.Height * .88);
++                    // 駒箱(大)の上の駒の場所
++                    int x = (int)(file * piece_img_size.Width * .96);
++                    int y = (int)(rank * piece_img_size.Height * .95);
+ 
+                     if (rank == 1)
+                         x += (int)(piece_img_size.Width / 2 * 0.8);
+@@ -478,7 +479,8 @@
+                     int file = pc % 2;
+                     int rank = pc / 2;
+ 
+-                    int x = (int)(file * piece_img_size.Width * .5);
++                    // 駒箱(小)の上の駒の場所
++                    int x = (int)(file * piece_img_size.Width * .58);
+                     int y = (int)(rank * piece_img_size.Height * .65);
+ 
+                     dest = new Point(

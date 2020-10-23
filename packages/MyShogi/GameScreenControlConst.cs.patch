@@ -1,5 +1,5 @@
 --- MyShogi.org/MyShogi/View/Win2D/Game/GameScreenControl/GameScreenControlConst.cs	2020-10-21 11:08:46.267572523 +0900
-+++ MyShogi/MyShogi/View/Win2D/Game/GameScreenControl/GameScreenControlConst.cs	2020-10-23 15:44:36.085562452 +0900
++++ MyShogi/MyShogi/View/Win2D/Game/GameScreenControl/GameScreenControlConst.cs	2020-10-23 19:06:20.609607662 +0900
 @@ -66,24 +66,25 @@
          {
              // 普通の駒台の場合
@@ -40,4 +40,16 @@
 +                new Point(/*Piece.GOLD  ,*/ -5,166),
              }
          };
+ 
+@@ -150,9 +151,9 @@
+         private static readonly Point[] hand_box_pos =
+         {
+             // 普通の駒箱
+-            new Point(229,643+52),
++            new Point(206,643+52),
+             // 細長の駒箱
+-            new Point(404-10,730),
++            new Point(404-28,730),
+         };
+ 
  
