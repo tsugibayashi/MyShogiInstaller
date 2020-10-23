@@ -19,6 +19,7 @@ PATCH6=TimeSettingControl.Designer.cs.patch
 PATCH7=howto-use-external-engine.patch
 PATCH8=ConsiderationEngineSettingDialog.Designer.patch
 PATCH9=MainDialogMenuItem.cs.patch
+PATCH10=GameScreenControlConst.cs.patch
 OS=Linux
 PREREQUISITES=prerequisites.sh
 
@@ -50,6 +51,7 @@ cp -p $PATCH6 ${WORKDIR}
 cp -p $PATCH7 ${WORKDIR}
 cp -p $PATCH8 ${WORKDIR}
 cp -p $PATCH9 ${WORKDIR}
+cp -p $PATCH10 ${WORKDIR}
 
 echo -n "MyShogiをインストールしています ... "
 
@@ -82,6 +84,8 @@ if [ ! -d $NAME ]; then
     patch -p1 < ${WORKDIR}/$PATCH8 2>&1 >> ${LOGDIR}/${NAME}.install.log
     # ファイル->棋譜に名前を付けて保存 のKIF形式の拡張子を .kif に修正
     patch -p1 < ${WORKDIR}/$PATCH9 2>&1 >> ${LOGDIR}/${NAME}.install.log
+    # 駒台(大)のときの駒の置く位置を調整
+    patch -p1 < ${WORKDIR}/$PATCH10 2>&1 >> ${LOGDIR}/${NAME}.install.log
 
     msbuild ./${NAME}.sln /p:Configuration=${OS} 2>&1 >> ${LOGDIR}/${NAME}.install.log
     # MyShogi.exe をインストールする
