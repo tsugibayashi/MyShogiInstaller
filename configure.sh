@@ -13,6 +13,7 @@ LOGDIR=$HOME/MyShogi/work/log
 ARCHLIST="avx2"
 #ARCHLIST="avx2,sse42"
 #ARCHLIST="avx2,sse42,sse41,sse2"
+#ARCHLIST="avx2,sse42,sse41,ssse3,sse2"
 
 ### やねうら王のビルドで使用するコンパイラ
 COMPILER=g++-9
