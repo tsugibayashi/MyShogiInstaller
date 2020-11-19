@@ -44,7 +44,7 @@ monodevelopは[公式サイト](https://www.mono-project.com/download)
 
 (3) 使用するPC上のCPUがサポートする拡張機能を確認します。
 
-    $ grep flags /proc/cpuinfo | head -1 | grep -E '(avx512|avx2|sse4_2|sse4_1|sse2)'
+    $ grep flags /proc/cpuinfo | head -1 | grep -E '(avx512|avx2|sse4_2|sse4_1|ssse3|sse2)'
 
 (4) ./configure.sh を開き、下記変数を修正します。
 

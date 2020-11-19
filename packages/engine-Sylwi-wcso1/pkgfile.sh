@@ -6,9 +6,14 @@ set -e
 # variables
 NAME=engine-Sylwi-wcso1
 DIRNAME=Sylwi-wcso1-nnue-halfkpe9
-URL=https://github.com/tttak/YaneuraOu.git
-COMMIT_HASH=d7a58b44e982f9608f9f0324d79f9ed101d17218     #Mar 26, 2020 (V4.89)
-EDITION=YANEURAOU_ENGINE_NNUE
+URL=https://github.com/yaneurao/YaneuraOu.git
+COMMIT_HASH=a47daa6c6e91fbb7bae1db370ee3c203258e2e1d     #Nov 16, 2020 (V5.32)
+#COMMIT_HASH=aad2c9a381c7d3a18d8ad37c7b1107d76a9b0dde    #Nov  3, 2020 (V5.01)
+#COMMIT_HASH=e69d268ca7cb65b376d83fc800cea4a04c9e1730    #Jun  1, 2020 (V4.91)
+#COMMIT_HASH=42de5c6cbbfb6bca55a4d7e3d91a8620a4596466    #May 28, 2020 (V4.90)
+#COMMIT_HASH=e99d2fc7c05489935badeb066de514a1ae2bcb1e    #Feb 28, 2020 (V4.89)
+#COMMIT_HASH=8a56754f48776bb487942f8e283de334bd4e9888    #Jun 25, 2019 (V4.88)
+EDITION=YANEURAOU_ENGINE_NNUE_HALFKPE9
 PREREQUISITES=prerequisites.sh
 
 # 変数(DESTDIR, WORKDIR, LOGDIR) の読み込み

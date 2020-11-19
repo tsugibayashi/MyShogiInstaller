@@ -7,7 +7,8 @@ set -e
 NAME=engine-tanuki-wcsc29
 DIRNAME=tanuki-wcsc29-nnue
 URL=https://github.com/yaneurao/YaneuraOu.git
-COMMIT_HASH=aad2c9a381c7d3a18d8ad37c7b1107d76a9b0dde     #Nov  3, 2020 (V5.01)
+COMMIT_HASH=a47daa6c6e91fbb7bae1db370ee3c203258e2e1d     #Nov 16, 2020 (V5.32)
+#COMMIT_HASH=aad2c9a381c7d3a18d8ad37c7b1107d76a9b0dde    #Nov  3, 2020 (V5.01)
 #COMMIT_HASH=e69d268ca7cb65b376d83fc800cea4a04c9e1730    #Jun  1, 2020 (V4.91)
 #COMMIT_HASH=42de5c6cbbfb6bca55a4d7e3d91a8620a4596466    #May 28, 2020 (V4.90)
 #COMMIT_HASH=e99d2fc7c05489935badeb066de514a1ae2bcb1e    #Feb 28, 2020 (V4.89)
