@@ -8,13 +8,13 @@ GitHub - jnory/MyShogiInstaller (https://github.com/jnory/MyShogiInstaller) を�
 
 ## 対応環境
 
-- Ubuntu 18.04
+- Ubuntu 20.04
 
 ## 前提作業
 
 MyShogiのビルドを行う前に、以下のパッケージをインストールして下さい。
 
-* monodevelop
+* mono-devel
 * msbuild
 * cmake
 * make
@@ -28,8 +28,26 @@ MyShogiのビルドを行う前に、以下のパッケージをインストー�
 * xclip (ビルドには不要ですが、読み筋のコピーのために必要です)
 * fonts-noto (表示するフォントとして使用します)
 
-monodevelopは[公式サイト](https://www.mono-project.com/download)
-に書かれた手順を参考にしてインストールして下さい。
+mono-develは[公式サイト](https://www.mono-project.com/download)や
+下記手順を参考にしてインストールして下さい。
+
+(1) 前提パッケージをインストールします。
+
+    $ sudo apt install gnupg ca-certificates
+
+(2) Mono(Stable) のレポジトリを追加します。
+
+    $ sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 3FA7E0328081BFF6A14DA29AA6A19B38D3D831EF
+    $ echo "deb [arch=amd64] https://download.mono-project.com/repo/ubuntu stable-focal main" | sudo tee /etc/apt/sources.list.d/mono-official-stable.list
+
+(3) レポジトリを更新します。
+
+    $ sudo apt update
+
+(4) mono-devel をインストールします。
+
+    $ sudo apt install mono-devel
+
 
 ## ビルド手順
 
