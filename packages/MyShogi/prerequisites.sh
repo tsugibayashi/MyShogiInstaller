@@ -3,8 +3,8 @@
 # mono
 if [[ ! `which mono` ]]; then
     echo "NG" 1>&2
-    echo "下記手順を参考にして monodevelop をインストールしてください:"
-    echo "    https://www.monodevelop.com/download/"
+    echo "下記手順を参考にして mono-devel をインストールしてください:"
+    echo "    https://www.mono-project.com/download"
     exit 1
 fi
 

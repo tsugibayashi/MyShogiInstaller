@@ -8,7 +8,6 @@ function print_usage() {
     echo "<操作>:" 1>&2
     echo "    all                  : 全てインストールする (思考エンジンはtanuki-のみインストールする)" 1>&2
     echo "    option               : 追加インストール可能な思考エンジンを表示" 1>&2
-    echo "    prerequisites        : 実行環境の確認" 1>&2
     echo "    MyShogi              : MyShogiのインストール" 1>&2
     echo "    engine-tanuki-wcso1  : 外部思考エンジン(tanuki- WCSO1版) のインストール (やねうら王NNUEを使用)" 1>&2
     echo "    eval-tanuki-wcso1    : 評価関数(tanuki- WCSO1版) のインストール" 1>&2
@@ -24,9 +23,9 @@ function print_usage() {
 # function print_option () {{{
 function print_option () {
     echo "下記ソフトウェアはオプション" 1>&2
-    echo "[水匠2 WCSO1版]" 1>&2
-    echo "      engine-Suisho2-wcso1 : 外部思考エンジン(水匠2 WCSO1版) のインストール (やねうら王NNUEを使用)" 1>&2
-    echo "      eval-Suisho2-wcso1   : 評価関数(水匠2 WCSO1版) のインストール" 1>&2
+    echo "[水匠3]" 1>&2
+    echo "      engine-Suisho3 : 外部思考エンジン(水匠3) のインストール (やねうら王NNUEを使用)" 1>&2
+    echo "      eval-Suisho3   : 評価関数(水匠3) のインストール" 1>&2
     echo "[Qhapaq WCSO1版]" 1>&2
     echo "      engine-Qhapaq-wcso1 : 外部思考エンジン(Qhapaq WCSO1版) のインストール (やねうら王NNUE-HalfKPE9を使用)" 1>&2
     echo "      eval-Qhapaq-wcso1   : 評価関数(Qhapaq WCSO1版) のインストール" 1>&2
@@ -65,15 +64,17 @@ function print_option () {
     echo "以降のソフトウェアは不要 (旧バージョンで使用していたもの)" 1>&2
     echo "    YaneuraOu_700t_book  : やねうら王 700テラショック定跡のインストール" 1>&2
     echo "    MyShogiImages-jnory  : 画像データ(jnory)のインストール" 1>&2
+    echo "    engine-Suisho2-wcso1 : 外部思考エンジン(水匠2 WCSO1版) のインストール (やねうら王NNUEを使用)" 1>&2
+    echo "    eval-Suisho2-wcso1   : 評価関数(水匠2 WCSO1版) のインストール" 1>&2
 }
 # }}}
 
 set -e
 
 ### variables
-#INSTALL_PACKAGES="prerequisites MyShogi engine-tanuki-wcsc29 eval-tanuki-wcsc29 YaneuraOu_std_book YaneuraOu_large_book YaneuraOu_true_book YaneuraOu_700t_book engine-tanuki-mate MyShogiSoundPlayer MyShogiImages-jnory MyShogiSound"
-#INSTALL_PACKAGES="prerequisites MyShogi engine-tanuki-wcso1 eval-tanuki-wcso1 YaneuraOu_std_book YaneuraOu_large_book YaneuraOu_true_book engine-tanuki-mate MyShogiSoundPlayer MyShogiImages-jnory MyShogiImages-ts MyShogiSound"
-INSTALL_PACKAGES="prerequisites MyShogi engine-tanuki-wcso1 eval-tanuki-wcso1 YaneuraOu_std_book YaneuraOu_large_book YaneuraOu_true_book engine-tanuki-mate MyShogiSoundPlayer MyShogiImages-ts MyShogiSound"
+#INSTALL_PACKAGES="MyShogi engine-tanuki-wcsc29 eval-tanuki-wcsc29 YaneuraOu_std_book YaneuraOu_large_book YaneuraOu_true_book YaneuraOu_700t_book engine-tanuki-mate MyShogiSoundPlayer MyShogiImages-jnory MyShogiSound"
+#INSTALL_PACKAGES="MyShogi engine-tanuki-wcso1 eval-tanuki-wcso1 YaneuraOu_std_book YaneuraOu_large_book YaneuraOu_true_book engine-tanuki-mate MyShogiSoundPlayer MyShogiImages-jnory MyShogiImages-ts MyShogiSound"
+INSTALL_PACKAGES="MyShogi engine-tanuki-wcso1 eval-tanuki-wcso1 YaneuraOu_std_book YaneuraOu_large_book YaneuraOu_true_book engine-tanuki-mate MyShogiSoundPlayer MyShogiImages-ts MyShogiSound"
 
 # $BASEDIR の設定
 BASEDIR=$(cd `dirname $0`; pwd)

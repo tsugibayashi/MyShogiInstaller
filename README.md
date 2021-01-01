@@ -126,19 +126,19 @@ GPL v3
 
 また、オプションとして以下ソフトウェアもインストールできます。
 
-* 水匠2 WCSO1版 (https://drive.google.com/drive/folders/19Al69YMkJ_cXSBhtn8df9yfxhn8QFCYo)
+* 水匠3 (https://drive.google.com/u/0/open?id=1GhFMz785Jjb8mUmUD9T7frBHhEM\_7llD)
 * やねうら王 NNUE-HalfKPE9型 思考エンジン (https://github.com/tttak/YaneuraOu/)
 * Qhapaq WCSO1版 (https://github.com/qhapaq-49/qhapaq-bin)
 * 名人コブラ WCSO1版 (https://drive.google.com/file/d/11AlHhwujgSxEoc1yk8wyTFJXQrh9LZ9q/view)
 * Sylwi WCSO1版 (https://github.com/mizar/YaneuraOu)
-* Apery WCSC30版 (https://github.com/HiraokaTakuya/apery_rust)
+* Apery WCSC30版 (https://github.com/HiraokaTakuya/apery\_rust)
 * orqha1018 (https://www.qhapaq.org/shogi/kifdb/)
 * shinderella Version:Cute (https://www.qhapaq.org/shogi/kifdb/)
 * shinderella Version:Cool (https://www.qhapaq.org/shogi/kifdb/)
 * やねうら王 NNUE型(KP256) 思考エンジン (https://github.com/yaneurao/YaneuraOu)
 * Kristallweizen改 V0.4 (https://github.com/Tama4649/Kristallweizen/)
-* 水匠U(二枚落ち特化) (https://drive.google.com/drive/folders/19Al69YMkJ_cXSBhtn8df9yfxhn8QFCYo)
-* 魚沼産やねうら王 (https://github.com/yaneurao/YaneuraOu/releases/tag/20190212_k-p-256-32-32)
+* 水匠U(二枚落ち特化) (https://drive.google.com/drive/folders/19Al69YMkJ\_cXSBhtn8df9yfxhn8QFCYo)
+* 魚沼産やねうら王 (https://github.com/yaneurao/YaneuraOu/releases/tag/20190212\_k-p-256-32-32)
 * やねうら王 MATERIAL型 思考エンジン (https://github.com/yaneurao/YaneuraOu)
 * tanuki- WCSC29版 (https://github.com/nodchip/tanuki-)
 
