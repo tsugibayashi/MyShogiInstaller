@@ -58,8 +58,8 @@ function print_option () {
     echo "[やねうら王NNUE(KP256)]" 1>&2
     echo "      engine-YaneuraOu-nnue-kp256 : 外部思考エンジン(やねうら王NNUE(KP256)) のインストール" 1>&2
     echo "      eval-YaneuraOu-nnue-kp256   : 評価関数(やねうら王NNUE(KP256)) のインストール" 1>&2
-    echo "[やねうら王MATERIAL]" 1>&2
-    echo "      engine-YaneuraOu-material   : 外部思考エンジン(やねうら王MATERIAL) のインストール" 1>&2
+    echo "[やねうら王MATERIAL(Level1)]" 1>&2
+    echo "      engine-YaneuraOu-material1  : 外部思考エンジン(やねうら王MATERIAL Level1) のインストール" 1>&2
     echo "----------------------------------------------------------------" 1>&2
     echo "以降のソフトウェアは不要 (旧バージョンで使用していたもの)" 1>&2
     echo "    YaneuraOu_700t_book  : やねうら王 700テラショック定跡のインストール" 1>&2
