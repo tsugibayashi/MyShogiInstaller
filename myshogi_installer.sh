@@ -11,10 +11,10 @@ function print_usage() {
     echo "    MyShogi              : MyShogiのインストール" 1>&2
     echo "    engine-tanuki-wcso1  : 外部思考エンジン(tanuki- WCSO1版) のインストール (やねうら王NNUEを使用)" 1>&2
     echo "    eval-tanuki-wcso1    : 評価関数(tanuki- WCSO1版) のインストール" 1>&2
+    echo "    engine-YaneuraOu-mate: やねうら王 詰将棋エンジンのインストール" 1>&2
     echo "    YaneuraOu_std_book   : やねうら王 標準定跡のインストール" 1>&2
     echo "    YaneuraOu_large_book : やねうら王 大定跡のインストール" 1>&2
     echo "    YaneuraOu_true_book  : 真やねうら王 定跡のインストール" 1>&2
-    echo "    engine-tanuki-mate   : tanuki-詰将棋エンジンのインストール" 1>&2
     echo "    MyShogiSoundPlayer   : SoundPlayerのインストール" 1>&2
     echo "    MyShogiImages-ts     : 画像データ(tsugibayashi)のインストール" 1>&2
     echo "    MyShogiSound         : 音声データのインストール" 1>&2
@@ -66,6 +66,7 @@ function print_option () {
     echo "    MyShogiImages-jnory  : 画像データ(jnory)のインストール" 1>&2
     echo "    engine-Suisho2-wcso1 : 外部思考エンジン(水匠2 WCSO1版) のインストール (やねうら王NNUEを使用)" 1>&2
     echo "    eval-Suisho2-wcso1   : 評価関数(水匠2 WCSO1版) のインストール" 1>&2
+    echo "    engine-tanuki-mate   : tanuki-詰将棋エンジンのインストール" 1>&2
 }
 # }}}
 
@@ -74,7 +75,8 @@ set -e
 ### variables
 #INSTALL_PACKAGES="MyShogi engine-tanuki-wcsc29 eval-tanuki-wcsc29 YaneuraOu_std_book YaneuraOu_large_book YaneuraOu_true_book YaneuraOu_700t_book engine-tanuki-mate MyShogiSoundPlayer MyShogiImages-jnory MyShogiSound"
 #INSTALL_PACKAGES="MyShogi engine-tanuki-wcso1 eval-tanuki-wcso1 YaneuraOu_std_book YaneuraOu_large_book YaneuraOu_true_book engine-tanuki-mate MyShogiSoundPlayer MyShogiImages-jnory MyShogiImages-ts MyShogiSound"
-INSTALL_PACKAGES="MyShogi engine-tanuki-wcso1 eval-tanuki-wcso1 YaneuraOu_std_book YaneuraOu_large_book YaneuraOu_true_book engine-tanuki-mate MyShogiSoundPlayer MyShogiImages-ts MyShogiSound"
+#INSTALL_PACKAGES="MyShogi engine-tanuki-wcso1 eval-tanuki-wcso1 YaneuraOu_std_book YaneuraOu_large_book YaneuraOu_true_book engine-tanuki-mate MyShogiSoundPlayer MyShogiImages-ts MyShogiSound"
+INSTALL_PACKAGES="MyShogi engine-tanuki-wcso1 eval-tanuki-wcso1 YaneuraOu_std_book YaneuraOu_large_book YaneuraOu_true_book engine-YaneuraOu-mate MyShogiSoundPlayer MyShogiImages-ts MyShogiSound"
 
 # $BASEDIR の設定
 BASEDIR=$(cd `dirname $0`; pwd)

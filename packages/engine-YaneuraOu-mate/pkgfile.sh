@@ -4,18 +4,17 @@
 set -e
 
 # variables
-NAME=engine-Suisho3
-DIRNAME=Suisho3-nnue
+NAME=engine-YaneuraOu-mate
+DIRNAME=YaneuraOu-mate
 URL=https://github.com/yaneurao/YaneuraOu.git
 COMMIT_HASH=68146b93ce98bd826691b90fd22e7f2742c285d8     #Jan  1, 2021 (V6.00)
-#COMMIT_HASH=7096f171c6bdb3252af9e64d26658ca5e143c546    #Dec  2, 2020 (V5.40)
 #COMMIT_HASH=a47daa6c6e91fbb7bae1db370ee3c203258e2e1d    #Nov 16, 2020 (V5.32)
 #COMMIT_HASH=aad2c9a381c7d3a18d8ad37c7b1107d76a9b0dde    #Nov  3, 2020 (V5.01)
 #COMMIT_HASH=e69d268ca7cb65b376d83fc800cea4a04c9e1730    #Jun  1, 2020 (V4.91)
 #COMMIT_HASH=42de5c6cbbfb6bca55a4d7e3d91a8620a4596466    #May 28, 2020 (V4.90)
 #COMMIT_HASH=e99d2fc7c05489935badeb066de514a1ae2bcb1e    #Feb 28, 2020 (V4.89)
 #COMMIT_HASH=8a56754f48776bb487942f8e283de334bd4e9888    #Jun 25, 2019 (V4.88)
-EDITION=YANEURAOU_ENGINE_NNUE
+EDITION=YANEURAOU_MATE_ENGINE
 PREREQUISITES=prerequisites.sh
 
 # 変数(DESTDIR, WORKDIR, LOGDIR) の読み込み
@@ -35,12 +34,10 @@ cd $BASEDIR/packages/$NAME
 
 # engine_define.xml を作業用ディレクトリにコピーする
 cp -p engine_define.xml ${WORKDIR}
-# engine_options.txt を作業用ディレクトリにコピーする
-cp -p engine_options.txt ${WORKDIR}
 # banner.png を作業用ディレクトリにコピーする
 cp -p banner.png ${WORKDIR}
 
-echo -n "外部思考エンジン (やねうら王NNUE) をインストールしています(少し時間がかかります) ... "
+echo -n "やねうら王 詰将棋solver をインストールしています(少し時間がかかります) ... "
 
 # 作業用ディレクトリに移動する
 cd ${WORKDIR} >& /dev/null
@@ -73,7 +70,7 @@ if [ ! -d $NAME ]; then
     # engine_define.xml をインストールする
     cp -pv ${WORKDIR}/engine_define.xml ${DESTDIR}/engine/$DIRNAME 2>&1 >> ${LOGDIR}/${NAME}.install.log
     # engine_options.txt をインストールする
-    cp -pv ${WORKDIR}/engine_options.txt ${DESTDIR}/engine/$DIRNAME 2>&1 >> ${LOGDIR}/${NAME}.install.log
+    #cp -pv ${WORKDIR}/engine_options.txt ${DESTDIR}/engine/$DIRNAME 2>&1 >> ${LOGDIR}/${NAME}.install.log
     # 画像ファイルをインストールする
     cp -pv ${WORKDIR}/banner.png ${DESTDIR}/engine/$DIRNAME 2>&1 >> ${LOGDIR}/${NAME}.install.log
 
